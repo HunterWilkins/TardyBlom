@@ -1,6 +1,6 @@
 const router = require("express").Router();
 
-router.get("/api/test", (req, res) => {
+router.get("/test", (req, res) => {
     res.send("Test Succeeded");
 });
 

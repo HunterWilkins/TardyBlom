@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
+    "start:prod": "node server.js",
+    "start:dev" : "concurrently \"nodemon --ignore 'client'/*'\" \"npm run client\"",
+    "install" : "cd client && npm install",
+    "client" : "cd client && npm run start",
+    "build" : "cd client && npm run build"
   },
   "repository": {
     "type": "git",
@@ -19,6 +24,7 @@
   },
   "homepage": "https://github.com/HunterWilkins/TheGoodStuff#readme",
   "dependencies": {
+    "concurrently": "^5.3.0",
     "express": "^4.17.1",
     "express-session": "^1.17.1",
     "sequelize": "^6.3.5"

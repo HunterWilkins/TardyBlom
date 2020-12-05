@@ -4,7 +4,7 @@ import "./style.css";
 function Nav() {
     return(
         <nav>
-            <Link to = "/home">Literature</Link>
+            <Link to = "/literature">Literature</Link>
             <Link to = "/home">Film</Link>
             <Link to = "/home">Games</Link>
             <Link to = "/home">Music</Link>

@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import Main from "./components/Main";
+import Literature from "./pages/Literature";
 import './App.css';
 
 function App() {
@@ -13,8 +14,10 @@ function App() {
         <Header />
         <Nav />
         <Main>
+        <hr />
           <Switch>
             <Route exact path = "/home" component = {Home} />
+            <Route exact path = "/literature" component = {Literature} />
             <Redirect from = "/" to = "/home" />
           </Switch>
         </Main>

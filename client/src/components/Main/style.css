@@ -1,6 +1,12 @@
 main {
     display: flex;
+    flex-direction: column;
     flex: 1;
-    justify-content: center;
-    align-items: center;
+    justify-content:center;
+    background: rgb(5, 1, 10);
+}
+
+main > div {
+    padding: 10px;
+    flex:1;
 }

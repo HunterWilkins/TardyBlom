@@ -4,7 +4,7 @@ import "./style.css";
 function Footer() {
     return(
         <footer>
-            <h3>wilkins.hunter@gmail.com</h3>
+            <p>wilkins.hunter@gmail.com</p>
         </footer>
     );
 }

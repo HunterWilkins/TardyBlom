@@ -1,7 +1,9 @@
 import axios from "axios";
 
-export default {
+const API = {
     getPosts: function(medium) {
         return axios.get("/api/posts/" + medium);
     }
 }
+
+export default API;

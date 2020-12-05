@@ -2,9 +2,23 @@ const db = require("../models");
 const express = require("express");
 const router = express.Router();
 
-router.get("/all", (req, res) => {
-    db.Post.findAll({}).then(dbPosts => res.json(dbPosts))
-    .catch(err => res.json(err));
+router.get("/:medium", (req, res) => {
+    // if (req.params.medium === "all") {
+    //     db.Post.findAll({}).then(dbPosts => res.json(dbPosts))
+    //     .catch(err => res.json(err));
+    // }
+
+    // else {
+        db.Post.findAll(
+            req.params.medium === "all" ?
+            {}
+            :
+            {
+                medium: req.params.medium
+            }
+        ).then(dbPosts => res.json(dbPosts)).catch(err => res.json(err));
+    // }
+
 });
 
 router.post("/", (req, res) => {

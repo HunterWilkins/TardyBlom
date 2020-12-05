@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Books, films, interactive experiences, music, anything is fair game.",
   "main": "server.js",
+  "engines" : {
+    "node" : "15.0.3"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

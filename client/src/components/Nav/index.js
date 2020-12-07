@@ -7,19 +7,17 @@ function Nav() {
 
     const [, dispatch] = useGlobalContext();
 
-    function updateMedium() {
+    function clearPosts() {
         dispatch({
-            type: "switchMedium",
-            medium: window.location.pathname.split("/")[1]
-        })
+            type: "clearPosts"
+        });
     }
 
     return(
         <nav>
-            <Link to = "/literature" onClick = {updateMedium}>Literature</Link>
-            <Link to = "/games" onClick = {updateMedium}>Games</Link>
-            <Link to = "/music" onClick = {updateMedium}>Music</Link>
-            <Link to = "/art" onClick = {updateMedium}>Art</Link>
+            <Link to = "/checkit">Check This Out</Link>
+            <Link to = "/theory">Theory Theater</Link>
+            <Link to = "/nonsequiturs">Nonsequiturs</Link>
         </nav>
     );
 }

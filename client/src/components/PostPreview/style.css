@@ -1,0 +1,23 @@
+.post-preview {
+    border-top: var(--layer0) dashed 2px;
+    border-bottom: var(--layer0) dashed 2px;
+    margin: 5px;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+    width: 500px;
+}
+
+.genre {
+    background: var(--layer0);
+    padding: 5px 8px;
+    margin: 5px;
+    border-radius: 15px;
+    display: inline-block;
+}
+
+.date {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+}

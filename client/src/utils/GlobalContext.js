@@ -6,16 +6,23 @@ const {Provider} = GlobalContext;
 
 const reducer = (state, action) => {
     switch(action.type) {
-        case "switchMedium":
+        case "switchChannel":
             return{
                 ...state,
-                medium: action.medium,
+                channel: action.channel,
+                posts: action.posts
             }
         case "getPosts":
             return {
                 ...state,
                 posts: action.posts
             }
+        case "clearPosts":
+            return {
+                ...state,
+                posts: []
+            }
+        
         default: return state;
     }
 }

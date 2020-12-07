@@ -11,7 +11,8 @@ function PostPreview(props) {
     return(
         <div className = "post-preview">
             <h3>{props.title}</h3>
-            <p>{fixDate(props.createdAt)}</p>
+            <p className = "genre">{props.genre}</p>
+            <p className = "date">{fixDate(props.createdAt)}</p>
         </div>
     );
 }

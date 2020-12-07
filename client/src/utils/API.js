@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = {
-    getPosts: function(medium) {
-        return axios.get("/api/posts/" + medium);
+    switchChannel: function(medium) {
+        return axios.get("/api/posts/channel/" + medium);
     }
 }
 

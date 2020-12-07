@@ -6,6 +6,9 @@ import {GlobalContextProvider} from "./utils/GlobalContext";
 import Main from "./components/Main";
 import './App.css';
 import Frontpage from "./pages/Frontpage/index.js";
+import CheckIt from "./pages/CheckIt";
+import Nonsequiturs from "./pages/Nonsequiturs";
+import Theory from "./pages/Theory";
 
 function App() {
   return (
@@ -18,7 +21,10 @@ function App() {
         <Main>
             <hr />
             <Switch>
-              <Route exact path = "/:medium" component = {Frontpage} />
+              <Route exact path = "/home" component = {Frontpage} />
+              <Route exact path = "/theory" component = {Theory} />
+              <Route exact path = "/checkit" component = {CheckIt} />
+              <Route exact path = "/nonsequiturs" component = {Nonsequiturs} />
               
               <Redirect from = "/" to = "/" />
             </Switch>

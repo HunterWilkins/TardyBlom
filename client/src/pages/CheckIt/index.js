@@ -4,18 +4,11 @@ import PostPreview from "../../components/PostPreview";
 import "./style.css";
 import API from "../../utils/API";
 
-function Frontpage() {
+function CheckIt() {
 
     const [state, dispatch] = useGlobalContext();
 
     useEffect(() => {
-        // API.getPosts(window.location.pathname.split("/")[1])
-        // .then(res => {
-        //     dispatch({
-        //         type: "getPosts",
-        //         posts: res.data
-        //     });
-        // }).catch(err => console.log(err));
     }, []);
 
     function capitalize(string) {
@@ -23,8 +16,9 @@ function Frontpage() {
     }
 
     return(
-        <div id = "frontpage">
-            <h2>{capitalize(window.location.pathname.split("/")[1])}</h2>
+        <div id = "checkit">
+            <h2>Check THIS out!</h2>
+            <h3>Entertainment reccomendations (not necessarily reviews) that give you everything you need to know about the product</h3>
             {
                 state.posts.length < 1 ? <p>No Posts Found. Maybe I just don't like {window.location.pathname.split("/")[1]}?</p>
                 :
@@ -38,4 +32,4 @@ function Frontpage() {
     );
 }
 
-export default Frontpage;
+export default CheckIt;

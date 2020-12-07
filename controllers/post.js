@@ -2,13 +2,11 @@ const db = require("../models");
 const express = require("express");
 const router = express.Router();
 
-router.get("/:medium", (req, res) => {
+router.get("/channel/:channel", (req, res) => {
         db.Post.findAll(
-            req.params.medium === "all" ?
-            {}:
             {
                 where: {
-                    medium: req.params.medium
+                    channel: req.params.channel
                 }
             }
         ).then(dbPosts => res.json(dbPosts)).catch(err => res.json(err));

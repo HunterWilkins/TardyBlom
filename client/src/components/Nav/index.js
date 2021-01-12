@@ -1,24 +1,55 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 import {useGlobalContext} from "../../utils/GlobalContext";
 import "./style.css";
+import API from "../../utils/API";
+
+import Dropdown from "../../components/Dropdown";
 
 function Nav() {
 
     const [, dispatch] = useGlobalContext();
+    const [genre, setGenre] = useState("");
+    const [hover, setHover] = useState(false);
+    const [articles, setArticles] = useState(false);
+    let filteredArticles = articles ? articles.filter(article => article.genre === genre) : [];
 
-    function clearPosts() {
-        dispatch({
-            type: "clearPosts"
+    useEffect(() => {
+        API.getArticles().then(function(response) {
+            console.log(response);
+            setArticles(response.data.rows);
+            filteredArticles = response.data.rows.filter(article => article.genre === genre);
         });
-    }
+
+    }, []);
 
     return(
+        <>
         <nav>
-            <Link to = "/checkit">Check This Out</Link>
-            <Link to = "/theory">Theory Theater</Link>
-            <Link to = "/nonsequiturs">Nonsequiturs</Link>
+            <p  onMouseEnter = {() => {
+                    setHover(true);
+                    setGenre("Reviews");
+                }} 
+                // onMouseLeave = {() => setHover(false)}
+                >Reviews</p>
+            <p onMouseEnter = {() => {
+                    setHover(true);
+                    setGenre("Ruminations");
+                }} >Ruminations</p>
+            <p onMouseEnter = {() => {
+                    setHover(true);
+                    setGenre("Random");
+                }} >Random</p>
         </nav>
+        {
+            hover ? 
+            <Dropdown filteredArticles = {filteredArticles} onMouseLeave = {() => setHover(false)} genre = {genre}/>
+            :
+            ""
+        }
+
+        </>
+
     );
 }
 

@@ -6,9 +6,8 @@ import {GlobalContextProvider} from "./utils/GlobalContext";
 import Main from "./components/Main";
 import './App.css';
 import Frontpage from "./pages/Frontpage/index.js";
-import CheckIt from "./pages/CheckIt";
-import Nonsequiturs from "./pages/Nonsequiturs";
-import Theory from "./pages/Theory";
+import Article from "./pages/Article";
+import Dropdown from "./components/Dropdown";
 
 function App() {
   return (
@@ -18,16 +17,17 @@ function App() {
 
         <Header />
         <Nav />
-        <Main>
-            <hr />
+       
+        <Main> 
+            <hr style = {{borderColor: "var(--comp-color-2)"}}/>
+
             <Switch>
               <Route exact path = "/home" component = {Frontpage} />
-              <Route exact path = "/theory" component = {Theory} />
-              <Route exact path = "/checkit" component = {CheckIt} />
-              <Route exact path = "/nonsequiturs" component = {Nonsequiturs} />
-              
-              <Redirect from = "/" to = "/" />
+              <Route exact path = "/article/:title" component = {Article} />
+              <Redirect from = "/" to = "/home" />
             </Switch>
+            <hr />
+
         </Main>
         <Footer />
         </GlobalContextProvider>

@@ -3,25 +3,25 @@ const express = require("express");
 const router = express.Router();
 
 router.get("/", (req, res) => {
-    db.Post.findAndCountAll(
+    db.Article.findAndCountAll(
         {
-           limit: 10,
-           offset: 0,
-           order: [["id", "DESC"]]
+            limit: 10,
+            offset: 0,
+            order: [["id", "DESC"]]
         }
     ).then(dbPosts => {res.json(dbPosts)}).catch(err => res.json(err));
 });
 
-router.get("/:title", (req, res) => {
-    db.Post.findOne({
+router.get("/:id", (req, res) => {
+    db.Article.findOne({
         where: {
-            title: req.params.title
+            id: req.params.id
         }
     }).then(dbPost => res.json(dbPost)).catch(err => res.json(err));
 });
 
 router.post("/", (req, res) => {
-    db.Post.create(req.body).then(dbPost => res.json(dbPost))
+    db.Article.create(req.body).then(dbPost => res.json(dbPost))
     .catch(err => res.json(err));
 });
 

@@ -3,5 +3,5 @@ footer {
     justify-content: center;
     align-items: center;
     padding: 5px;
-    background: var(--layer0);
+    background: var(--comp-color-2);
 }

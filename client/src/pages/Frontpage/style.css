@@ -1,0 +1,33 @@
+#frontpage {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#posts {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    margin-right: 5px;
+}
+/* 
+#posts .post-preview:nth-child(odd) {
+    background: var(--comp-color-2);
+}
+
+#posts .post-preview:nth-child(even) {
+    background: var(--comp-color-1);
+} */
+
+.post-preview:nth-child(odd) {
+    border-color: var(--comp-color-1);
+}
+
+.post-preview:nth-child(even) {
+    border-color: var(--comp-color-2);
+}
+
+#spacer {
+    flex: 1;
+    position: relative;
+}

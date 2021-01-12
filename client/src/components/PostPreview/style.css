@@ -1,23 +1,34 @@
-.post-preview {
-    border-top: var(--layer0) dashed 2px;
-    border-bottom: var(--layer0) dashed 2px;
-    margin: 5px;
-    padding: 5px;
-    position: relative;
-    cursor: pointer;
-    width: 500px;
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-.genre {
-    background: var(--layer0);
-    padding: 5px 8px;
-    margin: 5px;
-    border-radius: 15px;
-    display: inline-block;
+.post-preview {
+    padding: 10px;
+    margin-bottom: 15px;
+    position: relative;
+    cursor: pointer;
+   
+
+    border-top: var(--comp-color-2) dotted 4px;
+
+    animation-name: fadein;
+    animation-duration: .15s;
 }
 
 .date {
-    position: absolute;
+    /* position: absolute;
     right: 0;
-    bottom: 5px;
+    bottom: 5px; */
+    font-style: italic;
+    padding: 5px 0;
+    opacity: .75;
+}
+
+.body {
+    padding-bottom: 25px;
 }

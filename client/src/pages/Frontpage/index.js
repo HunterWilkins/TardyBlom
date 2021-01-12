@@ -1,39 +1,63 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {useGlobalContext} from "../../utils/GlobalContext";
 import PostPreview from "../../components/PostPreview";
+import Aside from "../../components/Aside";
 import "./style.css";
 import API from "../../utils/API";
 
 function Frontpage() {
 
     const [state, dispatch] = useGlobalContext();
+    const [asideFixed, setAsideFixed] = useState(false);
+    // const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        // API.getPosts(window.location.pathname.split("/")[1])
-        // .then(res => {
-        //     dispatch({
-        //         type: "getPosts",
-        //         posts: res.data
-        //     });
-        // }).catch(err => console.log(err));
+        API.getPosts()
+        .then(({data}) => {
+            console.log(data);
+            dispatch({
+                type: "getPosts",
+                posts: data.rows
+            })
+        }
+        );
     }, []);
 
+
+
     function capitalize(string) {
-        return (string.slice(0)[0].toUpperCase() + string.slice(1));
+        try {
+            return (string.slice(0)[0].toUpperCase() + string.slice(1));
+        }
+
+        catch {
+            return string;
+        }
     }
 
     return(
         <div id = "frontpage">
-            <h2>{capitalize(window.location.pathname.split("/")[1])}</h2>
+            <div id = "posts">
             {
-                state.posts.length < 1 ? <p>No Posts Found. Maybe I just don't like {window.location.pathname.split("/")[1]}?</p>
-                :
+                state.posts.length > 0 ?
                 state.posts.map(post => {
                     return(
-                        <PostPreview key = {post.title + post.createdAt} title = {post.title} createdAt = {post.createdAt}/>
+                        <PostPreview 
+                            title = {post.title}
+                            body = {post.body}
+                            createdAt = {post.createdAt}    
+                        />
                     );
                 })
+                : 
+                ""
             }
+            </div>
+            <div id = "spacer">
+                <Aside />
+            </div>
+
+            
         </div>
     );
 }

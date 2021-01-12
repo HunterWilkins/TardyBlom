@@ -17,8 +17,8 @@ h3 {
 
 hr {
     border: none;
-    border-bottom: var(--layer0) dashed 3px;
-    width: 80%;
+    border-bottom: var(--comp-color-1) dashed 3px;
+    width: 100%;
 }
 
 p, a {
@@ -40,9 +40,11 @@ em {
 
 /* CSS Variables */
 :root {
-    --background-color: rgb(19, 17, 27);
-    --layer0: rgb(55, 30, 58);
-    --text-color: rgb(225, 225, 225);
+    --background-color: #0b0b0c;
+    --layer0: #131316;
+    --text-color: rgb(230,230,230);
+    --comp-color-1: #307256;
+    --comp-color-2: #8b4c3d;
 }
 
 /* Custom Element Styling, Less Generic */
@@ -50,6 +52,7 @@ em {
 body {
     background: var(--background-color);
     color: var(--text-color);
+    font-family: sans-serif;
 }
 
 #content {
@@ -60,4 +63,5 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+    overflow-y: scroll;
 }

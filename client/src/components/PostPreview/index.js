@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./style.css";
 
 function PostPreview(props) {
@@ -11,8 +12,9 @@ function PostPreview(props) {
     return(
         <div className = "post-preview">
             <h3>{props.title}</h3>
-            <p className = "genre">{props.genre}</p>
             <p className = "date">{fixDate(props.createdAt)}</p>
+            <br />
+            <p className = "body">{props.body}</p>
         </div>
     );
 }

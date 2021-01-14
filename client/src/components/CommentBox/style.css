@@ -1,0 +1,22 @@
+#commentbox {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    font-family: sans-serif;
+
+    border: none;
+    padding: 5px;
+}
+
+#commentbox textarea {
+    color: var(--text-color);
+    background: var(--background-color);
+    height: 8em;
+    resize: vertical;
+}
+
+#commentbox button {
+    width: 100px;
+}

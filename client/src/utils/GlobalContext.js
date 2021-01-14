@@ -29,10 +29,11 @@ const reducer = (state, action) => {
             }
 
         case "login":
-            console.log(action.username);
+            console.log(action);
             return {
                 ...state,
-                username: action.username
+                username: action.username,
+                userId: action.userId
             }
         
         default: return state;
@@ -44,7 +45,8 @@ const GlobalContextProvider = ({value = [], ...props}) => {
         channel: "checkit",
         posts: [],
         article: 0,
-        username: null
+        username: null,
+        userId: null
     });
 
     return <Provider value = {[state, dispatch]} {...props} />

@@ -26,7 +26,7 @@ if (process.env.NODE_ENV === "production") {
 };
 
 app.use("/api/posts", controllers.post);
-app.use("/api/comments", controllers.comment);
+app.use("/api/comment", controllers.comment);
 app.use("/api/articles", controllers.article);
 app.use("/api/user", controllers.user);
 

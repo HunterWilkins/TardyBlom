@@ -8,25 +8,3 @@ header {
     flex: 1;
     font-size: 24px;
 }
-
-#login-box {
-    background: pink;
-    display: flex;
-    position: absolute;
-    right: 0;
-    
-    text-align: right;
-}
-
-#login-box input {
-    display: block;
-    flex: 1;
-}
-
-#login-box > * {
-    margin-right: 2px;
-}
-
-#signup-box {
-
-}

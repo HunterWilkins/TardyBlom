@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/API";
+import CommentBox from "../../components/CommentBox";
+import Comment from "../../components/Comment";
 
 import "./style.css";
 
@@ -10,6 +12,8 @@ function Article() {
     const [article, setArticle] = useState({
         data: 0
     });
+
+    const [comments, setComments] = useState([]);
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -25,6 +29,13 @@ function Article() {
                 newBody
             });
             setLoaded(true);
+        });
+
+        API.getComments(window.location.pathname.split("/")[2])
+        .then(({data}) => {
+            console.log(data);
+            setComments(data);
+            console.log(comments);
         });
     }
     ,[state.article]);
@@ -52,10 +63,11 @@ function Article() {
 
     return(
         <div>
-        {
-            loaded ?
             <article>
-                <div id = "topper">
+            {
+                loaded ?
+                <>
+                 <div id = "topper">
                     <h3>{article.title}</h3>
                     <span id = "top-wrapper">
                         {/* <p id = "genre">{capitalize(article.genre)}</p> */}
@@ -65,18 +77,29 @@ function Article() {
                 </div>
 
                 <p id = "body">{article.newBody}</p>
+             </>
+             :
+             <p>Please Wait</p>
+            }
             </article>
-            :
-            <p className = "wait"></p>
-        }
-        <div id = "comments">
             {
-                state.username ? 
-                <p>Comment Section</p>
+                state.userId ? 
+                <CommentBox articleId = {window.location.pathname.split("/")[2]} />
                 :
                 ""
             }
-        </div>
+            <div id = "comment-section">
+                {
+                    comments ? 
+                    comments.map(item => {
+                        return(
+                            <Comment item = {item} fixDate = {fixDate}/>
+                        );
+                    })
+                    :
+                    ""
+                }
+            </div>
         </div>
     )
 }

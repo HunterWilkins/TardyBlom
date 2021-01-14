@@ -17,6 +17,13 @@ article {
 
     animation-name: loadArticle;
     animation-duration: 1s;
+
+    border-bottom: var(--comp-color-1) dashed 3px;
+}
+
+#date {
+    font-size: 16px;
+    opacity: .8;
 }
 
 #topper {
@@ -46,7 +53,7 @@ article {
     text-align: left;
     white-space: pre-wrap;
     line-height: 1.5em;
-
+    padding-bottom: 50px;
 }
 
 .wait {
@@ -55,3 +62,9 @@ article {
     left: 50%;
     top: 50%;
 }
+
+#comment-section {
+    max-width: 500px;
+    padding-top: 10px;
+}
+

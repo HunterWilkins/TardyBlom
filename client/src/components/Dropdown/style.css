@@ -1,19 +1,31 @@
 @keyframes slide {
     from {
-        opacity: 0;
-        /* height: 0; */
+        /* opacity: 0; */
+        max-height: 0;
+        padding: 0;
+        overflow-y: hidden;
     }
     to {
-        opacity: 1;
-        /* height: 50px; */
+        padding: 5px;
+        /* opacity: 1; */
+        max-height: 200px;
+        overflow-y: auto;
     }
 }
 
 #dropdown {
-    padding: 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--comp-color-1);
+    padding: 5px;
     animation-name: slide;
     animation-duration: .15s;
     animation-timing-function: ease-in;
+    max-height: 200px;
+    z-index: 5;
+    overflow-y: auto;
 }
 
 #dropdown > * {
@@ -21,4 +33,5 @@
     padding: 5px;
     animation-name: slide;
     animation-duration: .15s;
+    margin-bottom: 5px;
 }

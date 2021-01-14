@@ -10,7 +10,11 @@ function Nav() {
 
     const [, dispatch] = useGlobalContext();
     const [genre, setGenre] = useState("");
-    const [hover, setHover] = useState(false);
+    const [hover, setHover] = useState({
+        review: false,
+        ruminations: false,
+        random: false
+    });
     const [articles, setArticles] = useState(false);
     let filteredArticles = articles ? articles.filter(article => article.genre === genre) : [];
 
@@ -25,29 +29,62 @@ function Nav() {
 
     return(
         <>
-        <nav>
-            <p  onMouseEnter = {() => {
-                    setHover(true);
+        <nav onMouseLeave = {() => setHover(false)}>
+            <div className = "navbutton" onMouseEnter = {() => {
+                    setHover({
+                        ruminations: false,
+                        random: false,
+                        review: true
+                    });
                     setGenre("Reviews");
                 }} 
                 // onMouseLeave = {() => setHover(false)}
-                >Reviews</p>
-            <p onMouseEnter = {() => {
-                    setHover(true);
+                >
+                <p>Reviews</p>
+                {
+                    hover.review ? 
+                    <Dropdown filteredArticles = {filteredArticles} onMouseLeave = {() => setHover(false)} genre = {genre}/>
+                    :
+                    ""
+                }
+            </div>
+            <div className = "navbutton" onMouseEnter = {() => {
+                    setHover({
+                        review: false,
+                        random: false,
+                        ruminations: true
+                    });
                     setGenre("Ruminations");
-                }} >Ruminations</p>
-            <p onMouseEnter = {() => {
-                    setHover(true);
+                }} 
+                // onMouseLeave = {() => setHover(false)}
+                >
+                <p>Ruminations</p>
+                {
+                    hover.ruminations ? 
+                    <Dropdown filteredArticles = {filteredArticles} onMouseLeave = {() => setHover(false)} genre = {genre}/>
+                    :
+                    ""
+                }
+            </div>
+            <div className = "navbutton" onMouseEnter = {() => {
+                    setHover({
+                        review: false,
+                        ruminations: false,
+                        random: true
+                    });
                     setGenre("Random");
-                }} >Random</p>
+                }} 
+                // onMouseLeave = {() => setHover(false)}
+                >
+                <p>Random</p>
+                {
+                    hover.random ?
+                    <Dropdown filteredArticles = {filteredArticles} onMouseLeave = {() => setHover(false)} genre = {genre}/>
+                    :
+                    ""
+                }
+            </div>
         </nav>
-        {
-            hover ? 
-            <Dropdown filteredArticles = {filteredArticles} onMouseLeave = {() => setHover(false)} genre = {genre}/>
-            :
-            ""
-        }
-
         </>
 
     );

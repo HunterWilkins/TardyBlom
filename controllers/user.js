@@ -12,12 +12,12 @@ router.post("/login", (req, res) => {
         }
     ).then((dbUser) => {
         if (dbUser.validate(req.body.password)) {
-            console.log("Found user: " + dbUser.username);
             const response = {
+                id: dbUser.id,
                 username: dbUser.username,
                 email: dbUser.email
             };
-            req.session.user = dbUser.username;
+            req.session.user = response;
             res.json(response);
         }
 
@@ -29,17 +29,21 @@ router.post("/login", (req, res) => {
 });
 
 router.get("/check", (req, res) => {
-    console.log("This is the current user: " + req.session.user);
-    // if (!req.User) {
-    //     req.User = "smash";
-    // }
-    res.json(req.session.user !== null || req.User !== undefined);
+    if (req.session.user) {
+        res.json(req.session.user);
+    }
+    else {
+        res.json(false);
+    }
+});
+
+router.get("/logout", (req, res) => {
+    req.session.user = null;
+    res.send(200);
 })
 
 
 router.post("/signup", (req, res) => {
-    console.log("Creating user...");
-    console.log(req.body);
     db.User.create(req.body).then(dbPost => res.json(dbPost))
     .catch(err => res.json(err));
 });

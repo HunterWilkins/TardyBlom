@@ -1,0 +1,24 @@
+.comment {
+    position: relative;
+    margin-bottom: 15px;
+    padding: 7px 10px;
+    background: var(--layer1);
+    width: 100%;
+}
+
+.author {
+    font-size: 16px;
+    opacity: .75;
+}
+
+.comment-date {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    font-size: 14px;
+    opacity: .75;
+}
+
+.comment-body {
+    font-size: 16px;
+}

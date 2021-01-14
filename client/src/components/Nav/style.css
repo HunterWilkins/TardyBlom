@@ -7,9 +7,14 @@ nav {
 }
 
 nav > * {
+    cursor: pointer;
     flex: 1;
     padding: 5px;
     text-align: center;
-    margin: 0 5px;
-    
+    /* margin: 0 5px; */
 }
+
+.navbutton {
+    position: relative;
+}
+

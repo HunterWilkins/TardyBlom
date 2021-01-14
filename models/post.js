@@ -11,11 +11,11 @@ module.exports = function(sequelize, DataTypes) {
         }
     });
 
-    Post.associate = (models) => {
-        Post.hasMany(models.Comment, {
-            onDelete: "cascade"
-        });
-    }
+    // Post.associate = (models) => {
+    //     Post.hasMany(models.Comment, {
+    //         onDelete: "cascade"
+    //     });
+    // }
 
     return Post
 }

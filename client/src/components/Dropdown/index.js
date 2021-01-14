@@ -9,7 +9,7 @@ function Dropdown({onMouseLeave, filteredArticles}) {
     const [state, dispatch] = useGlobalContext();
 
     return (
-        <div id = "dropdown" onMouseLeave = {() => onMouseLeave()}>
+        <div id = "dropdown" >
             {
                 filteredArticles.length > 0 ?
                 filteredArticles.map(item => <Link onClick = { () =>

@@ -12,7 +12,8 @@ function Main(props) {
             console.log(response.data);
             dispatch({
                 type: "login",
-                username: response.data
+                username: response.data.username,
+                userId: response.data.id
             });
         })
     }, [])

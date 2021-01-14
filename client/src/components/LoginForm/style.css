@@ -1,0 +1,80 @@
+@keyframes revealUsername {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+#login-modal {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 5;
+    background: rgba(0,0,0,.45);   
+}
+
+input[placeholder=Username] {
+    animation-name: revealUsername;
+    animation-duration: .5s;
+}
+
+#login-buttons {
+    margin-top: 15px;
+    display: block;
+}
+
+#login-buttons button {
+    background: var(--background-color);
+    color: var(--text-color);
+    border: var(--text-color) solid 2px;
+}
+
+#login-buttons :first-child {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    margin-right: 5px;
+}
+
+#login-buttons :last-child {
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+#login-box {
+    text-align:center;
+}
+
+#login-box input {
+    display: block;
+    flex: 1;
+    padding: 7px;
+    border: none;
+    background: var(--background-color);
+    color: var(--text-color);
+    border: var(--text-color) solid 2px;
+    margin: 8px 0;
+}
+
+#close-modal {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    margin: 15px;
+}
+
+#close-modal p {
+    font-family:'Courier New', Courier, monospace;
+    font-size: 28px;
+}

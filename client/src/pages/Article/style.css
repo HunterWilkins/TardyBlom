@@ -49,11 +49,12 @@ article {
 }
 
 #body {
-    width: 70%;
+    max-width: 500px;
     text-align: left;
     white-space: pre-wrap;
     line-height: 1.5em;
     padding-bottom: 50px;
+    font-size: 17px;
 }
 
 .wait {
@@ -64,7 +65,13 @@ article {
 }
 
 #comment-section {
+    width: 500px;
+    padding-top: 25px;
+}
+
+img {
+    display: block;
+    border: var(--text-color) solid 2px;
     max-width: 500px;
-    padding-top: 10px;
 }
 

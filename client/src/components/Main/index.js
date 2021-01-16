@@ -9,7 +9,6 @@ function Main(props) {
 
     useEffect(() => {
         API.checkLoggedIn().then((response) => {
-            console.log(response.data);
             dispatch({
                 type: "login",
                 username: response.data.username,

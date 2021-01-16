@@ -20,7 +20,6 @@ function Nav() {
 
     useEffect(() => {
         API.getArticles().then(function(response) {
-            console.log(response);
             setArticles(response.data.rows);
             filteredArticles = response.data.rows.filter(article => article.genre === genre);
         });

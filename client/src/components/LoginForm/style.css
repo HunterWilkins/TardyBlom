@@ -34,7 +34,9 @@ input[placeholder=Username] {
 #login-buttons button {
     background: var(--background-color);
     color: var(--text-color);
-    border: var(--text-color) solid 2px;
+    border: var(--layer2) solid 2px;
+    font-size: 16px;
+    padding: 5px 8px;
 }
 
 #login-buttons :first-child {
@@ -50,6 +52,13 @@ input[placeholder=Username] {
 
 #login-box {
     text-align:center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    padding: 15px;
+    border: var(--comp-color-1) solid 4px;
+    border-radius: 15px;
 }
 
 #login-box input {
@@ -59,7 +68,7 @@ input[placeholder=Username] {
     border: none;
     background: var(--background-color);
     color: var(--text-color);
-    border: var(--text-color) solid 2px;
+    border: var(--layer2) solid 2px;
     margin: 8px 0;
 }
 
@@ -72,6 +81,7 @@ input[placeholder=Username] {
     width: 40px;
     border-radius: 50%;
     margin: 15px;
+    border-color: var(--layer2);
 }
 
 #close-modal p {

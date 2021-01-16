@@ -65,10 +65,11 @@ function LoginForm(props) {
                         setLogin(!login)
                         }}>{!login ? "Login?" : "Sign Up?"}</button>
                 </span>
+                <div className = "darkbutton" id = "close-modal" onClick = {() => props.closeModal()}>
+                    <p>x</p>
+                </div>
             </form>
-            <div className = "darkbutton" id = "close-modal" onClick = {() => props.closeModal()}>
-                <p>x</p>
-            </div>
+            
         </div>
     )
 }

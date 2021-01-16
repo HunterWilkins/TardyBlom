@@ -29,11 +29,17 @@ const reducer = (state, action) => {
             }
 
         case "login":
-            console.log(action);
             return {
                 ...state,
                 username: action.username,
                 userId: action.userId
+            }
+
+        case "logout":
+            return {
+                ...state,
+                username: null,
+                userId: null
             }
         
         default: return state;

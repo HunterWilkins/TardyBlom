@@ -23,22 +23,48 @@ function Article() {
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             
-            let newBody = "\t" + data.body.replace(/\n/g, "\n\t");
+            let spacedBody = "\t" + data.body.replace(/\n/g, "\n\n\t");
+           
+            // let newBody = spacedBody.replace(/\[.*?\]/g, "<img src = 'https://gamerdame.files.wordpress.com/2011/06/rof2.jpg' alt = " + imgLink + "/>")
+            // console.log(splitBody);
+            // let newBodyWithImg = newBody.replace(/###LINK/g, )
             setArticle({
                 ...data,
-                newBody
+                newBody: spacedBody
             });
             setLoaded(true);
         });
 
         API.getComments(window.location.pathname.split("/")[2])
         .then(({data}) => {
-            console.log(data);
             setComments(data);
-            console.log(comments);
         });
     }
     ,[state.article]);
+
+
+    function renderBody() {
+        article.newBody = article.newBody.trimEnd();
+        if (article.newBody.indexOf("###IMG") !== -1) {            
+            let imgSplit = article.newBody.split(/(\[.*?\]+)/);
+            return(
+                imgSplit.map(item => {
+                    if (item.indexOf("###IMG") !== -1) {
+                        let imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim() + ".jpg";
+                        let alt = article.title;
+                        return <img alt = {alt} src = {imgSrc} />
+                    }
+                    else {
+                        return <p>{item}</p>
+                    }
+                })
+            );
+        }
+
+        else {
+            return <p>{article.newBody}</p>
+        } 
+    }
 
     function fixDate(date) {
         try {
@@ -75,11 +101,14 @@ function Article() {
                         <p id = "date">{fixDate(article.createdAt)}</p>
                     </span>
                 </div>
+               
 
-                <p id = "body">{article.newBody}</p>
+                <div id = "body">
+                    {renderBody()}
+                </div>
              </>
              :
-             <p>Please Wait</p>
+             <p>Please Wait...</p>
             }
             </article>
             {

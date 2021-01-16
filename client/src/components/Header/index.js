@@ -12,14 +12,20 @@ function Header() {
     const [loginState, dispatch] = useGlobalContext();
     const [modal, setModal] = useState(false);
 
+    function handleLogout() {
+        API.logout().then(dispatch({
+            type: "logout"
+        }))
+    }
+
     return(
         <header>
             <Link to = "/home" id = "logo">The Good Stuff</Link>
             {
                 loginState.username ? 
-                <button className = "darkbutton" onClick = {() => API.logout()}>Logout</button>
+                <button className = "darkbutton" onClick = {() => handleLogout()}>Logout</button>
                 :
-                <button className = "darkbutton" onClick = {() => setModal(!modal)}>Login/Signup</button>
+                <p id = "login-prompt" onClick = {() => setModal(!modal)}>Login / Signup</p>
             }
             {
                 modal ? 

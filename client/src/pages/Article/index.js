@@ -101,7 +101,7 @@ function Article() {
                         <p id = "date">{fixDate(article.createdAt)}</p>
                     </span>
                 </div>
-               
+               <br />
 
                 <div id = "body">
                     {renderBody()}

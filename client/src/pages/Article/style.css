@@ -49,12 +49,16 @@ article {
 }
 
 #body {
-    max-width: 500px;
+    max-width: 550px;
     text-align: left;
     white-space: pre-wrap;
     line-height: 1.5em;
     padding-bottom: 50px;
     font-size: 17px;
+}
+
+#body > p {
+    width: 100%;
 }
 
 .wait {
@@ -70,8 +74,27 @@ article {
 }
 
 img {
+    margin: 0 auto;
+    width: 100%;
     display: block;
     border: var(--text-color) solid 2px;
-    max-width: 500px;
+}
+
+@media only screen and (max-width: 500px) {
+    #body {
+        line-height: 1.4em;
+    }
+
+    #body p{
+        font-size: 17px;
+    }
+
+    #comment-section {
+        width: 100%;
+    }
+
+    img {
+        width: 70%;
+    }
 }
 

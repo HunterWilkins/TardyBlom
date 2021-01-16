@@ -55,13 +55,11 @@ em {
 
 /* Custom Element Styling, Less Generic */
 
-body {
+#root {
     background: var(--background-color);
     color: var(--text-color);
     font-family: sans-serif;
-}
 
-#content {
     display: flex;
     flex-direction: column;
     position: fixed;
@@ -71,6 +69,8 @@ body {
     bottom: 0;
     overflow-y: scroll;
 }
+
+
 
 .darkbutton {
     background: var(--background-color);

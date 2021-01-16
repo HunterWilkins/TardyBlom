@@ -18,3 +18,12 @@ nav > * {
     position: relative;
 }
 
+@media only screen and (max-width: 500px) {
+    .navbutton p {
+        font-size: 16px;
+    }
+
+    .navbutton {
+        display: inline-block;
+    }
+}

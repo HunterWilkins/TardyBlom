@@ -28,8 +28,9 @@ function App() {
             <hr />
 
         </Main>
-        <Footer />
+        
         </GlobalContextProvider>
+        <Footer />
     </Router>
   );
 }

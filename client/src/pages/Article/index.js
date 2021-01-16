@@ -95,11 +95,7 @@ function Article() {
                 <>
                  <div id = "topper">
                     <h3>{article.title}</h3>
-                    <span id = "top-wrapper">
-                        {/* <p id = "genre">{capitalize(article.genre)}</p> */}
-                        <p id = "medium">{capitalize(article.medium)}</p>
-                        <p id = "date">{fixDate(article.createdAt)}</p>
-                    </span>
+                    <p id = "date">{fixDate(article.createdAt)}</p>    
                 </div>
                <br />
 

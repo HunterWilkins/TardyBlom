@@ -11,6 +11,7 @@ import Dropdown from "./components/Dropdown";
 
 function App() {
   return (
+    <>
     <Router>
       <GlobalContextProvider>
 
@@ -30,8 +31,9 @@ function App() {
         </Main>
         
         </GlobalContextProvider>
-        <Footer />
     </Router>
+    <Footer />
+    </>
   );
 }
 

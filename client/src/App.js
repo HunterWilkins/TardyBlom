@@ -27,12 +27,12 @@ function App() {
               <Redirect from = "/" to = "/home" />
             </Switch>
             <hr />
-
+            <Footer />
         </Main>
         
         </GlobalContextProvider>
     </Router>
-    <Footer />
+   
     </>
   );
 }

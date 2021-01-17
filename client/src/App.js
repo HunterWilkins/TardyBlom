@@ -7,6 +7,7 @@ import Main from "./components/Main";
 import './App.css';
 import Frontpage from "./pages/Frontpage/index.js";
 import Article from "./pages/Article";
+import ArticleList from "./pages/ArticleList";
 import Dropdown from "./components/Dropdown";
 import { useEffect, useState } from "react";
 
@@ -43,6 +44,7 @@ function App() {
             <Switch>
               <Route exact path = "/home" component = {Frontpage} />
               <Route exact path = "/article/:title" component = {Article} />
+              <Route exact path = "/genres/:genre" component = {ArticleList}/>
               <Redirect from = "/" to = "/home" />
             </Switch>
             <hr />

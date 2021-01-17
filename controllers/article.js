@@ -7,9 +7,12 @@ router.get("/", (req, res) => {
         {
             limit: 10,
             offset: 0,
-            order: [["id", "DESC"]]
+            order: [["id", "DESC"]],
+            attributes: ["title", "id", "createdAt", "updatedAt", "genre"]
         }
-    ).then(dbPosts => {res.json(dbPosts)}).catch(err => res.json(err));
+    ).then(dbPosts => {
+        console.log(dbPosts);
+        res.json(dbPosts)}).catch(err => res.json(err));
 });
 
 router.get("/:id", (req, res) => {

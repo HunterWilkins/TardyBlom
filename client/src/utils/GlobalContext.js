@@ -12,6 +12,12 @@ const reducer = (state, action) => {
                 channel: action.channel,
                 posts: []
             }
+        case "genre":
+            console.log(action.genre)
+            return {
+                ...state,
+                genre: action.genre
+            }
         case "getPosts":
             return {
                 ...state,
@@ -25,7 +31,7 @@ const reducer = (state, action) => {
         case "getArticle":
             return {
                 ...state,
-                article: API.getArticle(action.article)
+                article: action.article
             }
 
         case "login":
@@ -41,6 +47,11 @@ const reducer = (state, action) => {
                 username: null,
                 userId: null
             }
+        case "getArticles":
+            return {
+                ...state,
+                articles: action.articles
+            }
         
         default: return state;
     }
@@ -50,6 +61,7 @@ const GlobalContextProvider = ({value = [], ...props}) => {
     const [state, dispatch] = useReducer(reducer, {
         channel: "checkit",
         posts: [],
+        articles: [],
         article: 0,
         username: null,
         userId: null

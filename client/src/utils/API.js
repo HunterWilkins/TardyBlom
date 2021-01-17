@@ -28,7 +28,6 @@ const API = {
     logout: function() {
         return axios.get("/api/user/logout");
     },
-
     checkLoggedIn: function() {
         return axios.get("/api/user/check");
     },

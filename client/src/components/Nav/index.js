@@ -21,12 +21,10 @@ function Nav() {
     useEffect(() => {
         API.getArticles().then(function(response) {
             setArticles(response.data.rows);
-            console.log(response.data.rows);
             dispatch({
                 type: "getArticles",
                 articles: response.data.rows
             });
-            // filteredArticles = response.data.rows.filter(article => article.genre === genre);
         });
     }, []);
 

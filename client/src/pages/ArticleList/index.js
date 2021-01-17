@@ -9,9 +9,7 @@ function ArticleList() {
     const [state, dispatch] = useGlobalContext();
 
     useEffect(() => {
-        console.log(state.articles);
         if (!state.genre) {
-            console.log("NO GENRE");
             dispatch({
                 type: "genre",
                 genre: window.location.pathname.split("/")[2]
@@ -35,24 +33,27 @@ function ArticleList() {
 
     return(
         <div>
-            <ul>
-                {
-                    state.articles ?
+            {
+                state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0 ?
+                <ul>
+                { 
                     state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).map(item => {
-                        console.log(item);
                         return(
-                        <li className = "article-link">
-                            <Link to = {"/article/" + item.id}>
-                                <p>{item.title}</p>
-                                <p className = "date">{fixDate(item.createdAt)}</p>
-                            </Link>
-                        </li>
-                        )
+                            <li className = "article-link">
+                                <Link to = {"/article/" + item.id}>
+                                    <p>{item.title}</p>
+                                    <p className = "date">{fixDate(item.createdAt)}</p>
+                                </Link>
+                            </li>
+                        )        
+                        
                     })
-                    :
-                    ""
-                }
-            </ul>
+                }                
+                </ul>
+                :
+                <p>No results for {state.genre}.</p>
+            }
+           
         </div>
     )
 

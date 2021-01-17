@@ -13,7 +13,6 @@ const reducer = (state, action) => {
                 posts: []
             }
         case "genre":
-            console.log(action.genre)
             return {
                 ...state,
                 genre: action.genre
@@ -62,6 +61,7 @@ const GlobalContextProvider = ({value = [], ...props}) => {
         channel: "checkit",
         posts: [],
         articles: [],
+        genre: null,
         article: 0,
         username: null,
         userId: null

@@ -7,7 +7,7 @@ import LoginForm from "../../components/LoginForm";
 
 import Nav from "../Nav";
 
-function Header() {
+function Header({mobileWidth}) {
 
     const [loginState, dispatch] = useGlobalContext();
     const [modal, setModal] = useState(false);
@@ -21,6 +21,12 @@ function Header() {
     return(
         <header>
             <Link to = "/home" id = "logo">The Good Stuff</Link>
+            {
+                mobileWidth ?
+                ""
+                :
+                <Nav />
+            }
             {
                 loginState.username ? 
                 <button className = "darkbutton" onClick = {() => handleLogout()}>Logout</button>

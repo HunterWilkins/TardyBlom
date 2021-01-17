@@ -64,10 +64,12 @@ article {
     line-height: 1.5em;
     padding-bottom: 50px;
     font-size: 17px;
+
 }
 
 #body > p {
-    width: 100%;
+    width: 100%;    
+    transition: .25s;
 }
 
 .wait {
@@ -89,7 +91,7 @@ img {
     border: var(--text-color) solid 2px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 585px) {
     #body {
         line-height: 1.4em;
     }

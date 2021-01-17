@@ -50,7 +50,8 @@ function Article() {
             return(
                 imgSplit.map(item => {
                     if (item.indexOf("###IMG") !== -1) {
-                        let imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim() + ".jpg";
+                        let imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim();
+
                         let alt = article.title;
                         return <img alt = {alt} src = {imgSrc} />
                     }

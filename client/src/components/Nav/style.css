@@ -1,9 +1,10 @@
 nav {
     display: flex;
-    
-    background: var(--comp-color-1);
+    flex: 1;
+    /* background: var(--comp-color-1); */
     justify-content: space-evenly;
     align-items: center;
+    margin-right: 15px;
 }
 
 nav > * {
@@ -18,7 +19,14 @@ nav > * {
     position: relative;
 }
 
-@media only screen and (max-width: 500px) {
+.navbutton p {
+    font-size: 16px;
+}
+
+@media only screen and (max-width: 585px) {
+    nav {
+        margin-right: initial;
+    }
     .navbutton p {
         font-size: 16px;
     }

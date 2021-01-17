@@ -23,8 +23,8 @@ function Nav() {
             setArticles(response.data.rows);
             filteredArticles = response.data.rows.filter(article => article.genre === genre);
         });
-
     }, []);
+
 
     return(
         <>

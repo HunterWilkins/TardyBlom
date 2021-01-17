@@ -8,16 +8,35 @@ import './App.css';
 import Frontpage from "./pages/Frontpage/index.js";
 import Article from "./pages/Article";
 import Dropdown from "./components/Dropdown";
+import { useEffect, useState } from "react";
 
 function App() {
+  const [mobileWidth, setMobileWidth] = useState(window.innerWidth < 585);
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+  });
+
+  function handleResize() {
+    if (window.innerWidth < 585 && !mobileWidth) {
+      setMobileWidth(true);
+    }
+    else if (window.innerWidth >= 585 && mobileWidth) {
+      setMobileWidth(false);
+    }
+  }
+
   return (
     <>
     <Router>
       <GlobalContextProvider>
 
-        <Header />
-        <Nav />
-       
+        <Header mobileWidth = {mobileWidth}/>
+        {
+          mobileWidth ? 
+          <Nav />
+          :
+          ""
+        }
         <Main> 
             <hr style = {{borderColor: "var(--comp-color-2)"}}/>
 

@@ -20,7 +20,7 @@ function Header({mobileWidth}) {
 
     return(
         <header>
-            <Link to = "/home" id = "logo">The Good Stuff</Link>
+            <Link to = "/home" id = "logo">Tardyblom</Link>
             {
                 mobileWidth ?
                 ""

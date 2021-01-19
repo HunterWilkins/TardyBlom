@@ -49,6 +49,7 @@ em {
     --layer1: #1f2024;
     --layer2: #43454b;
     --text-color: rgb(230,230,230);
+    --text-color-half: rgba(230,230,230,.25);
     --comp-color-1: #307256;
     --comp-color-2: #8b4c3d;
 }

@@ -2,6 +2,7 @@ import {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import {useGlobalContext} from "../../utils/GlobalContext";
+import {Helmet} from "react-helmet";
 import "./style.css";
 
 function ArticleList() {
@@ -33,6 +34,9 @@ function ArticleList() {
 
     return(
         <div>
+            <Helmet>
+                <title>Articles | tardyblom.com</title>
+            </Helmet>
             {
                 state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0 ?
                 <ul>

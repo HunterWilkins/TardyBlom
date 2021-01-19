@@ -8,16 +8,19 @@
 }
 
 .post-preview {
-    padding: 10px;
-    margin-bottom: 15px;
-    position: relative;
-    cursor: pointer;
-   
-
-    border-top: var(--comp-color-2) dotted 4px;
+    padding: 25px 5px;
+    position: relative;   
 
     animation-name: fadein;
     animation-duration: .15s;
+}
+
+.post-preview > * {
+    transition: .15s;
+}
+
+.post-preview:not(:first-child) {
+    border-top: var(--text-color-half) dashed 2px;
 }
 
 .date {
@@ -26,9 +29,25 @@
     bottom: 5px; */
     font-style: italic;
     padding: 5px 0;
-    opacity: .75;
+    opacity: .5;
 }
 
 .body {
+    white-space: pre-wrap;
+    line-height: 1.2em;
     padding-bottom: 25px;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-preview h3 {
+        font-size: 20px;
+    }
+
+    .post-preview .date {
+        font-size: 16px;
+    }
+
+    .post-preview .body {
+        font-size: 18px;
+    }
 }

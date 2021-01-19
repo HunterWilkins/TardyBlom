@@ -58,6 +58,7 @@ function LoginForm(props) {
                 <input placeholder = "Username" style = {login ? {display: "none"} : {display: "block"}} />
                 <input type = "email" placeholder = "Email" />
                 <input type = "password" placeholder = "Password" />
+
                 <span id = "login-buttons">
                     <button onClick = {(event) => handleLogin(event)}>{login ? "Login" : "Signup"}</button>
                     <button onClick = {(event) => {
@@ -65,10 +66,11 @@ function LoginForm(props) {
                         setLogin(!login)
                         }}>{!login ? "Login?" : "Sign Up?"}</button>
                 </span>
-                <div className = "darkbutton" id = "close-modal" onClick = {() => props.closeModal()}>
-                    <p>x</p>
-                </div>
             </form>
+
+            <div id = "close-modal" onClick = {() => props.closeModal()}>
+                    
+            </div>
             
         </div>
     )

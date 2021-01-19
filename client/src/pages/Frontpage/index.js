@@ -4,6 +4,7 @@ import PostPreview from "../../components/PostPreview";
 import Aside from "../../components/Aside";
 import "./style.css";
 import API from "../../utils/API";
+import {Helmet} from "react-helmet";
 
 function Frontpage() {
 
@@ -37,6 +38,9 @@ function Frontpage() {
 
     return(
         <div id = "frontpage">
+            <Helmet>
+                <title>Tardyblom Home</title>
+            </Helmet>
             <div id = "posts">
             {
                 state.posts.length > 0 ?
@@ -50,14 +54,13 @@ function Frontpage() {
                     );
                 })
                 : 
-                ""
+                <p>There don't appear to be any posts.</p>
             }
             </div>
+
             <div id = "spacer">
                 <Aside />
             </div>
-
-            
         </div>
     );
 }

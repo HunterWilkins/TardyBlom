@@ -3,6 +3,7 @@ import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/API";
 import CommentBox from "../../components/CommentBox";
 import Comment from "../../components/Comment";
+import {Helmet} from "react-helmet";
 
 import "./style.css";
 
@@ -13,6 +14,8 @@ function Article() {
         data: 0
     });
 
+    const [title, setTitle] = useState("");
+
     const [comments, setComments] = useState([]);
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
@@ -22,9 +25,9 @@ function Article() {
     useEffect(() => {
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
-            
+            setTitle(data.title);
             let spacedBody = "\t" + data.body.replace(/\n/g, "\n\n\t");
-           
+            
             // let newBody = spacedBody.replace(/\[.*?\]/g, "<img src = 'https://gamerdame.files.wordpress.com/2011/06/rof2.jpg' alt = " + imgLink + "/>")
             // console.log(splitBody);
             // let newBodyWithImg = newBody.replace(/###LINK/g, )
@@ -90,6 +93,14 @@ function Article() {
 
     return(
         <div>
+            <Helmet>
+                {
+                    title !== "" ?
+                    <title>{title} | tardyblom.com</title>
+                    :
+                    ""
+                }
+            </Helmet>
             <article>
             {
                 loaded ?

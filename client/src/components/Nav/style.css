@@ -24,6 +24,7 @@ nav > * {
 @media only screen and (max-width: 585px) {
     nav {
         margin-right: initial;
+        flex: none;
     }
 
     .navbutton {

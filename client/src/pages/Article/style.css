@@ -42,6 +42,7 @@ article {
 }
 
 #date {
+    margin-top: 5px;
     font-size: 16px;
     opacity: .8;
 }

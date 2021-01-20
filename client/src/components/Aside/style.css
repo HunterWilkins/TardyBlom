@@ -23,6 +23,7 @@
 }
 
 aside {
+   
     padding: 10px;
     background: var(--layer1);
     display: flex;

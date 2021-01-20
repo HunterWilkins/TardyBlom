@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    height: 100%;
 }
 
 #posts {
@@ -10,19 +11,13 @@
     flex: 3;
     margin-right: 30px;
 }
-/* 
-#posts .post-preview:nth-child(odd) {
-    background: var(--comp-color-2);
-}
-
-#posts .post-preview:nth-child(even) {
-    background: var(--comp-color-1);
-} */
 
 #spacer {
+    position: sticky;
+    top: 15px;
+    /* bottom: 70px; */
     flex: 1;
     transition: .15s;
-    position: relative;
 }
 
 @media only screen and (max-width: 800px) {
@@ -40,3 +35,9 @@
     }
 }
 
+/*Media Query for short height*/
+@media only screen and (max-height: 450px) {
+    #spacer {
+        display: none;
+    }
+}

@@ -36,7 +36,7 @@ function Nav() {
     }
 
     return(
-        <>
+       
         <nav onMouseLeave = {() => setHover(false)}>
             <Link to = "/genres/reviews" onClick = {() => setUpGenre("reviews")} className = "navbutton">
                 Reviews
@@ -49,7 +49,7 @@ function Nav() {
             </Link>
             
         </nav>
-        </>
+       
 
     );
 }

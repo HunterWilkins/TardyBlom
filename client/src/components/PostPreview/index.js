@@ -3,7 +3,10 @@ import {Link} from "react-router-dom";
 import "./style.css";
 
 function PostPreview(props) {
-    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    const months = ["January", "February", "March", 
+                    "April", "May", "June", "July", 
+                    "August", "September", "October", 
+                    "November", "December"];
     
     function fixDate(date) {
         let convertedDate = date.replace(date.replace(/-/g, "/").split("/")[2].slice(2), "");

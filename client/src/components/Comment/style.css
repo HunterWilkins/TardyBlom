@@ -1,7 +1,7 @@
 .comment {
     position: relative;
     margin-bottom: 15px;
-    padding: 7px 10px;
+    padding: 10px;
     background: var(--layer1);
     width: 100%;
 }

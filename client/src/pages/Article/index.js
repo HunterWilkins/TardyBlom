@@ -14,6 +14,8 @@ function Article() {
         data: 0
     });
 
+    const [topOfPage, setTopOfPage] = useState(true);
+
     const [title, setTitle] = useState("");
 
     const [comments, setComments] = useState([]);
@@ -23,6 +25,7 @@ function Article() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
+        window.addEventListener("scroll", handleScroll);
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             setTitle(data.title);
@@ -91,6 +94,20 @@ function Article() {
         }
     }
 
+    function handleScroll() {
+        if (window.scrollY > 0 && topOfPage) {
+            setTopOfPage(false);
+        }
+
+        if (window.scrollY === 0 && !topOfPage) {
+            setTopOfPage(true);
+        }
+    }
+
+    function jumpUp() {
+        window.scrollTo(0, 0);
+    }
+
     return(
         <div>
             <Helmet>
@@ -119,24 +136,29 @@ function Article() {
              <p>Please Wait...</p>
             }
             </article>
+         
+           
             {
-                state.userId ? 
-                <CommentBox articleId = {window.location.pathname.split("/")[2]} />
-                :
-                ""
-            }
-            <div id = "comment-section">
-                {
-                    comments ? 
-                    comments.map(item => {
+                comments.length > 0 ? 
+                <div id = "comment-section">
+                    <h3>Comments</h3>
+                   
+                    {
+                        state.userId ? 
+                        <CommentBox articleId = {window.location.pathname.split("/")[2]} />
+                        :
+                        ""
+                    }
+                    {comments.map(item => {
                         return(
                             <Comment item = {item} fixDate = {fixDate}/>
                         );
-                    })
-                    :
-                    ""
-                }
-            </div>
+                    })}
+                </div>
+                :
+                ""
+            }
+            <img style = {!topOfPage ? {"display" : "block"} : {"display" : "none"}} alt = "Jump to Top" src = "/images/up-arrow.png" id = "jumpUp" onClick = {jumpUp} />
         </div>
     )
 }

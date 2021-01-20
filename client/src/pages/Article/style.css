@@ -8,6 +8,22 @@
     }
 }
 
+@keyframes revealButton {
+    0% {
+        opacity: 0;
+        transform: scale(.5);
+        filter: brightness(1);
+    }
+    75% {
+        opactity: 1;
+        transform: scale(1.2);
+        filter: brightness(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
 article {
     -ms-box-orient: horizontal;
     display: -webkit-box;
@@ -23,8 +39,6 @@ article {
 
     animation-name: loadArticle;
     animation-duration: 1s;
-
-    border-bottom: var(--comp-color-1) dashed 3px;
 }
 
 #date {
@@ -62,7 +76,7 @@ article {
     text-align: left;
     white-space: pre-wrap;
     line-height: 1.5em;
-    padding-bottom: 50px;
+    padding-bottom: 30px;
     font-size: 17px;
 
 }
@@ -80,8 +94,30 @@ article {
 }
 
 #comment-section {
+    border-top: var(--text-color-half) dashed 3px;
     width: 500px;
-    padding-top: 25px;
+}
+
+#jumpUp {
+    cursor: pointer;
+    position: sticky;
+    right: 0;
+    bottom: 10px;
+    width: 35px;
+    background: var(--layer1);
+    padding: 5px;
+    border-radius: 50%;
+    border: var(--text-color-half) solid 2px;
+    text-align: right;
+    flex: none;
+    align-self: flex-end;
+
+    animation-name: revealButton;
+    animation-duration: .15s;
+}
+
+#comment-section h3 {
+    padding: 15px 0;
 }
 
 article img {

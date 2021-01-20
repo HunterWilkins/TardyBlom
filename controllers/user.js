@@ -44,7 +44,15 @@ router.get("/logout", (req, res) => {
 
 
 router.post("/signup", (req, res) => {
-    db.User.create(req.body).then(dbPost => res.json(dbPost))
+    db.User.create(req.body).then(dbUser => {
+        const response = {
+            id: dbUser.id,
+            username: dbUser.username,
+            email: dbUser.email
+        };
+        req.session.user = response;
+        res.json(response);
+    })
     .catch(err => res.json(err));
 });
 

@@ -54,6 +54,10 @@ em {
     background: var(--comp-color-2);
 }
 
+html {
+    background: var(--background-color);
+}
+
 /* CSS Variables */
 :root {
     --background-color: #0b0b0c;    

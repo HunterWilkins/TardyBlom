@@ -14,7 +14,7 @@ function Article() {
         data: 0
     });
 
-    const [topOfPage, setTopOfPage] = useState(false);
+    const [topOfPage, setTopOfPage] = useState(true);
 
     const [title, setTitle] = useState("");
 
@@ -135,19 +135,19 @@ function Article() {
              <p>Please Wait...</p>
             }
             </article>
-         
+            {
+            state.userId ? 
+            <CommentBox articleId = {window.location.pathname.split("/")[2]} />
+            :
+            ""
+            }
            
             {
                 comments.length > 0 ? 
                 <div id = "comment-section">
                     <h3>Comments</h3>
                    
-                    {
-                        state.userId ? 
-                        <CommentBox articleId = {window.location.pathname.split("/")[2]} />
-                        :
-                        ""
-                    }
+                   
                     {comments.map(item => {
                         return(
                             <Comment item = {item} fixDate = {fixDate}/>
@@ -157,7 +157,7 @@ function Article() {
                 :
                 ""
             }
-            <img style = {!topOfPage ? {"display" : "block"} : {"display" : "none"}} alt = "Jump to Top" src = "/images/up-arrow.png" id = "jumpUp" onClick = {jumpUp} />
+            <img alt = "Jump to Top" src = "/images/up-arrow.png" id = "jumpUp" onClick = {jumpUp} />
         </div>
     )
 }

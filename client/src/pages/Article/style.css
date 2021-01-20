@@ -148,5 +148,10 @@ article img {
     img {
         width: 70%;
     }
+
+    #jumpUp {
+        width: 50px;
+        box-shadow: 0 5px 0 black;
+    }
 }
 

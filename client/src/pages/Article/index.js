@@ -14,7 +14,7 @@ function Article() {
         data: 0
     });
 
-    const [topOfPage, setTopOfPage] = useState(true);
+    const [topOfPage, setTopOfPage] = useState(false);
 
     const [title, setTitle] = useState("");
 
@@ -25,7 +25,7 @@ function Article() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
+        // window.addEventListener("scroll", handleScroll);
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             setTitle(data.title);
@@ -45,8 +45,7 @@ function Article() {
         .then(({data}) => {
             setComments(data);
         });
-    }
-    ,[state.article]);
+    }, [state.article]);
 
 
     function renderBody() {

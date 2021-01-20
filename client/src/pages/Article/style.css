@@ -116,6 +116,11 @@ article {
     animation-duration: .15s;
 }
 
+/* #jumpUp:hover {
+    transform: scale(1.1);
+    filter:brightness(1.2);
+} */
+
 #comment-section h3 {
     padding: 15px 0;
 }

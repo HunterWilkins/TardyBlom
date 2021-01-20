@@ -95,7 +95,7 @@ function Article() {
     }
 
     function handleScroll() {
-        if (window.scrollY > 0 && topOfPage) {
+        if (window.scrollY > 0 && topOfPage === true) {
             setTopOfPage(false);
         }
 

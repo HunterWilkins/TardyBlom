@@ -13,6 +13,7 @@ function Article() {
     const [article, setArticle] = useState({
         data: 0
     });
+    const [mobileWidth, setMobileWidth] = useState(false);
 
     const [topOfPage, setTopOfPage] = useState(true);
 
@@ -26,17 +27,17 @@ function Article() {
 
     useEffect(() => {
         // window.addEventListener("scroll", handleScroll);
+        // window.addEventListener("resize", handleResize);
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             setTitle(data.title);
-            let spacedBody = "\t" + data.body.replace(/\n/g, "\n\n\t");
             
             // let newBody = spacedBody.replace(/\[.*?\]/g, "<img src = 'https://gamerdame.files.wordpress.com/2011/06/rof2.jpg' alt = " + imgLink + "/>")
             // console.log(splitBody);
             // let newBodyWithImg = newBody.replace(/###LINK/g, )
             setArticle({
                 ...data,
-                newBody: spacedBody
+                newBody: data.body
             });
             setLoaded(true);
         });
@@ -47,11 +48,11 @@ function Article() {
         });
     }, [state.article]);
 
-
     function renderBody() {
         article.newBody = article.newBody.trimEnd();
-        if (article.newBody.indexOf("###IMG") !== -1) {            
-            let imgSplit = article.newBody.split(/(\[.*?\]+)/);
+        if (article.newBody.indexOf("###IMG") !== -1) {        
+            let spacedBody =  "\t" + article.newBody.replace(/\n/g, "\n\n");
+            let imgSplit = spacedBody.split(/(\[.*?\]+)/);
             return(
                 imgSplit.map(item => {
                     if (item.indexOf("###IMG") !== -1) {

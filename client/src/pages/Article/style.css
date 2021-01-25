@@ -76,13 +76,13 @@ article {
     max-width: 550px;
     text-align: left;
     white-space: pre-wrap;
-    line-height: 1.5em;
+   
     padding-bottom: 30px;
-    font-size: 17px;
-
 }
 
 #body > p {
+    font-size: 16px;
+    line-height: 1.5em;
     width: 100%;    
     transition: .25s;
 }
@@ -158,8 +158,8 @@ article img {
         line-height: 1.4em;
     }
 
-    #body p{
-        font-size: 17px;
+    #body p {
+        font-size: 16px;
     }
 
     #comment-section {

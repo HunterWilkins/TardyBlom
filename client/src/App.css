@@ -58,8 +58,7 @@ html {
     background: var(--background-color);
 }
 
-/* CSS Variables */
-:root {
+.dark-mode {
     --background-color: #0b0b0c;    
     --background-color-half: #0b0b0cd8;
     --layer0: #131316;
@@ -71,11 +70,37 @@ html {
     --comp-color-2: #8b4c3d;
 }
 
+.light-mode {
+    --background-color: #ad605e;    
+    --background-color-half: #f3f3f38c;
+    --layer0: #e9e9e9;
+    --layer1: #ad605e;
+    --layer2: #cfc58c;
+    --text-color: rgb(36, 36, 36);
+    --text-color-half: rgba(36, 36, 36, 0.288);
+    --comp-color-1: #86b3e6;
+    --comp-color-2: #8b4c3d;
+    --alt-color: white;
+
+}
+
+/* CSS Variables */
+/* :root {
+    --background-color: #0b0b0c;    
+    --background-color-half: #0b0b0cd8;
+    --layer0: #131316;
+    --layer1: #1f2024;
+    --layer2: #43454b;
+    --text-color: rgb(230,230,230);
+    --text-color-half: rgba(230,230,230,.25);
+    --comp-color-1: #307256;
+    --comp-color-2: #8b4c3d;
+} */
+
 /* Custom Element Styling, Less Generic */
 
 #root {
-    background: var(--background-color);
-    color: var(--text-color);
+    
     font-family: sans-serif;
 
     display: flex;
@@ -87,6 +112,14 @@ html {
     right: 0;
     bottom: 0; */
     /* overflow-y: scroll; */
+}
+
+#content {
+    background: var(--background-color);
+    color: var(--text-color);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 

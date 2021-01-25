@@ -13,6 +13,7 @@ import { useEffect, useState } from "react";
 
 function App() {
   const [mobileWidth, setMobileWidth] = useState(window.innerWidth < 585);
+  const [darkMode, setDarkMode] = useState(true);
   useEffect(() => {
     window.addEventListener("resize", handleResize);
   });
@@ -27,7 +28,7 @@ function App() {
   }
 
   return (
-    <>
+    <div id = "content" className = {darkMode ? "dark-mode" : "light-mode"}>
     <Router>
       <GlobalContextProvider>
 
@@ -54,7 +55,7 @@ function App() {
         </GlobalContextProvider>
     </Router>
    
-    </>
+    </div>
   );
 }
 

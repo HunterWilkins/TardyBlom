@@ -4,6 +4,8 @@ import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/API";
 
 function Main(props) {
+
+    console.log(props);
     
     const [state, dispatch] = useGlobalContext();
 
@@ -18,7 +20,7 @@ function Main(props) {
     }, [])
 
     return(
-        <main>
+        <main {...props}>
             {props.children}
         </main>
     );

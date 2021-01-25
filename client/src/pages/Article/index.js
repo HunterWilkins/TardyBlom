@@ -53,7 +53,7 @@ function Article() {
         if (article.newBody.indexOf("###IMG") !== -1) {  
             let trimbody = article.newBody.replace(/\t/g, "");      
             let spacedBody =  "\t" + trimbody.replace(/\n/g, "\n\n\t");
-            let imgSplit = spacedBody.split(/(\[.*?\]+)/);
+            let imgSplit = spacedBody.split(/(\[\#\#\#IMG.*?\#\#\#\]+)/);
             return(
                 imgSplit.map(item => {
                     if (item.indexOf("###IMG") !== -1) {
@@ -159,7 +159,16 @@ function Article() {
                 :
                 ""
             }
-            <img alt = "Jump to Top" src = "/images/up-arrow.png" id = "jumpUp" onClick = {jumpUp} />
+            <div id = "tools">
+                <figure id = "jumpUp">
+                    <img alt = "Jump to Top" src = "/images/up-arrow.png" onClick = {jumpUp} />
+                </figure>
+
+                {/* <figure id = "theme" onClick = {() => props.changeTheme()}>
+                    <img alt = "Brightness Controller" src = "/images/brightness.png" />
+                </figure> */}
+
+            </div>
         </div>
     )
 }

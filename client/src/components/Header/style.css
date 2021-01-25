@@ -1,6 +1,7 @@
 header {
   /* position: sticky; */
   /* top: 0; */
+  color: var(--alt-color);
   padding:15px;
   display: flex;
   align-items: center;
@@ -18,7 +19,7 @@ header {
   cursor: pointer;
   font-size: 16px;
   padding: 4px 0;
-  border-bottom: var(--text-color) solid 2px;
+  border-bottom: var(--alt-color) solid 2px;
 }
 
 @media only screen and (max-width: 585px) {

@@ -64,7 +64,8 @@ const GlobalContextProvider = ({value = [], ...props}) => {
         genre: null,
         article: 0,
         username: null,
-        userId: null
+        userId: null,
+        darkMode: false
     });
 
     return <Provider value = {[state, dispatch]} {...props} />

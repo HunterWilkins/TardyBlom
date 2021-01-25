@@ -39,22 +39,22 @@ function ArticleList() {
             </Helmet>
             {
                 state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0 ?
-                <ul>
+                <div>
                 { 
                     state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).map(item => {
                         return(
-                            <li className = "article-link">
-                                <Link to = {"/article/" + item.id}>
-                                    <p>{item.title}</p>
-                                    <p className = "medium" value = {item.medium}>{item.medium}</p>
-                                    <p className = "date">{fixDate(item.createdAt)}</p>
-                                </Link>
-                            </li>
+                            
+                            <Link className = "article-link" to = {"/article/" + item.id}>
+                                <p>{item.title}</p>
+                                <p className = "medium" value = {item.medium}>{item.medium}</p>
+                                <p className = "date">{fixDate(item.createdAt)}</p>
+                            </Link>
+                        
                         )        
                         
                     })
                 }                
-                </ul>
+                </div>
                 :
                 <p>No results for {state.genre}.</p>
             }

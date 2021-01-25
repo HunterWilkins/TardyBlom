@@ -50,8 +50,9 @@ function Article() {
 
     function renderBody() {
         article.newBody = article.newBody.trimEnd();
-        if (article.newBody.indexOf("###IMG") !== -1) {        
-            let spacedBody =  "\t" + article.newBody.replace(/\n/g, "\n\n");
+        if (article.newBody.indexOf("###IMG") !== -1) {  
+            let trimbody = article.newBody.replace(/\t/g, "");      
+            let spacedBody =  "\t" + trimbody.replace(/\n/g, "\n\n\t");
             let imgSplit = spacedBody.split(/(\[.*?\]+)/);
             return(
                 imgSplit.map(item => {

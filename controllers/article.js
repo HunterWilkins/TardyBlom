@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
             limit: 10,
             offset: 0,
             order: [["id", "DESC"]],
-            attributes: ["title", "id", "createdAt", "updatedAt", "genre"]
+            attributes: ["title", "id", "createdAt", "updatedAt", "genre", "medium"]
         }
     ).then(dbPosts => {
         console.log(dbPosts);

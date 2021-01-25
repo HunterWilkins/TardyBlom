@@ -12,7 +12,7 @@ function Aside() {
             <div id = "info">
                 <p><em>"Tardyblom"</em><br />What does it mean? Nothing at all!</p>
                 <hr />
-                <p>This site is one man's attempt to be the next IGN...but with every medium.</p>
+                <p>This site is one man's attempt to be the next IGN.</p>
                 <br />
                 <p>You can expect anything from standard reviews to ruminations on different hobbies. 
                     Additionally, there'll be the occasional article completely out of left field.</p>

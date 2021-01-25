@@ -129,7 +129,7 @@ article {
 
 article img {
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
     display: block;
     border: var(--text-color) solid 2px;
 }

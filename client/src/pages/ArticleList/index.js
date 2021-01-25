@@ -46,6 +46,7 @@ function ArticleList() {
                             <li className = "article-link">
                                 <Link to = {"/article/" + item.id}>
                                     <p>{item.title}</p>
+                                    <p className = "medium" value = {item.medium}>{item.medium}</p>
                                     <p className = "date">{fixDate(item.createdAt)}</p>
                                 </Link>
                             </li>

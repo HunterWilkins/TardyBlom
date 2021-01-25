@@ -32,31 +32,46 @@ function ArticleList() {
         }
     }
 
+    function renderArticles() {
+        try {
+            if (state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0) {
+                return(
+                    <div>
+                    { 
+                        state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).map(item => {
+                            return(
+                                
+                                <Link className = "article-link" to = {"/article/" + item.id}>
+                                    <p>{item.title}</p>
+                                    <p className = "medium" value = {item.medium}>{item.medium}</p>
+                                    <p className = "date">{fixDate(item.createdAt)}</p>
+                                </Link>
+                            
+                            )        
+                            
+                        })
+                    }                
+                    </div>        
+                )                
+            }
+
+            else {
+                return(<p>No results for {state.genre}.</p>);
+            }
+             
+        }
+        catch {
+            return <p>Something went wrong when grabbing articles. Please come back later!</p>
+        }
+    }
+
     return(
         <div>
             <Helmet>
                 <title>Articles | tardyblom.com</title>
             </Helmet>
             {
-                state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0 ?
-                <div>
-                { 
-                    state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).map(item => {
-                        return(
-                            
-                            <Link className = "article-link" to = {"/article/" + item.id}>
-                                <p>{item.title}</p>
-                                <p className = "medium" value = {item.medium}>{item.medium}</p>
-                                <p className = "date">{fixDate(item.createdAt)}</p>
-                            </Link>
-                        
-                        )        
-                        
-                    })
-                }                
-                </div>
-                :
-                <p>No results for {state.genre}.</p>
+                renderArticles()
             }
            
         </div>

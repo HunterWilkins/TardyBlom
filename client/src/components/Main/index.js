@@ -3,10 +3,7 @@ import "./style.css";
 import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/API";
 
-function Main(props) {
-
-    console.log(props);
-    
+function Main(props) {    
     const [state, dispatch] = useGlobalContext();
 
     useEffect(() => {

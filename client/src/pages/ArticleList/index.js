@@ -36,7 +36,7 @@ function ArticleList() {
         try {
             if (state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).length > 0) {
                 return(
-                    <div>
+                    <div id = "article-list">
                     { 
                         state.articles.filter(item => item.genre.toLowerCase() === state.genre.toLowerCase()).map(item => {
                             return(
@@ -47,8 +47,7 @@ function ArticleList() {
                                     <p className = "date">{fixDate(item.createdAt)}</p>
                                 </Link>
                             
-                            )        
-                            
+                            )
                         })
                     }                
                     </div>        

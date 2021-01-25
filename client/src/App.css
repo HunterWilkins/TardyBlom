@@ -47,11 +47,11 @@ em {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--background-color);
+    background: var(--scrollbar-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--comp-color-2);
+    background: var(--scrollbar-thumb);
 }
 
 html {
@@ -85,17 +85,10 @@ html {
 }
 
 /* CSS Variables */
-/* :root {
-    --background-color: #0b0b0c;    
-    --background-color-half: #0b0b0cd8;
-    --layer0: #131316;
-    --layer1: #1f2024;
-    --layer2: #43454b;
-    --text-color: rgb(230,230,230);
-    --text-color-half: rgba(230,230,230,.25);
-    --comp-color-1: #307256;
-    --comp-color-2: #8b4c3d;
-} */
+:root {
+    --scrollbar-color: rgb(45,45,45);
+    --scrollbar-thumb: rgb(165,165,165);
+}
 
 /* Custom Element Styling, Less Generic */
 

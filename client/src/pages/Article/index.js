@@ -122,7 +122,7 @@ function Article() {
                     title !== "" ?
                     <title>{title} | tardyblom.com</title>
                     :
-                    ""
+                    <title>Article | tardyblom.com</title>
                 }
             </Helmet>
             <article>
@@ -149,21 +149,27 @@ function Article() {
             :
             ""
             }
+
+            <div id = "comment-section">
+                <h3>Comments</h3>
+                
+                
+                {
+                comments.length > 0 ?
+                comments.map(item => {
+                    return(
+                        <Comment item = {item} fixDate = {fixDate}/>
+                    );
+                })
+                :
+                <p><em>- No comments yet -</em></p>
+            
+                }
+            </div>
            
             {
-                comments.length > 0 ? 
-                <div id = "comment-section">
-                    <h3>Comments</h3>
-                   
-                   
-                    {comments.map(item => {
-                        return(
-                            <Comment item = {item} fixDate = {fixDate}/>
-                        );
-                    })}
-                </div>
-                :
-                ""
+             
+                
             }
             <div id = "tools">
                 <figure id = "jumpUp">

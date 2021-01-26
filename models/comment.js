@@ -10,13 +10,15 @@ module.exports = function(sequelize, DataTypes) {
         Comment.belongsTo(models.Article, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            onDelete: "CASCADE"
         });
 
         Comment.belongsTo(models.User, {
             foreignKey: {
                 allowNull: false
-            }
+            },
+            onDelete: "CASCADE"
         })
     }
 

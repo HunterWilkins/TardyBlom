@@ -7,6 +7,17 @@
         opacity: 1;
     }
 }
+
+@keyframes revealFailure {
+    from {
+        opacity: 0;
+        height: 0;
+    }
+    to {
+        opacity: 1;
+        height: initial;
+    }
+}
 #login-modal {
     display: flex;
     position: fixed;
@@ -89,4 +100,9 @@ input[placeholder=Username] {
 #close-modal p {
     font-family:'Courier New', Courier, monospace;
     font-size: 28px;
+}
+
+#failure-message {
+    animation-name: revealFailure;
+    animation-duration: .25s;
 }

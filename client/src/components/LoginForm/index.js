@@ -15,6 +15,8 @@ function LoginForm(props) {
         email: ""
     });
 
+    const [failureMessage, setFailureMessage] = useState("");
+
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [email, setEmail] = useState("");
@@ -36,18 +38,35 @@ function LoginForm(props) {
                     username: response.data.username, 
                     userId: response.data.id
                 });
-                props.closeModal();
+                setFailureMessage("");
+                props.closeModal();    
+                
+            }).catch((err) => {
+                console.log(err);
+                
+                setFailureMessage("Incorrect Credentials");
+                
             });    
         }
 
         else {
             API.signup(state).then(response => {
-                dispatch({
-                    type: "login", 
-                    username: response.data.username, 
-                    userId: response.data.id
-                });
-                props.closeModal();
+                console.log(response);
+                if (response.data.message) {
+                    setFailureMessage(response.data.message);
+                }
+                else {
+                    dispatch({
+                        type: "login", 
+                        username: response.data.username, 
+                        userId: response.data.id
+                    });
+                    setFailureMessage("");
+                    props.closeModal();    
+                }
+            }).catch((err) => {
+                console.log(err);
+                setFailureMessage("");
             });
         }
     }
@@ -65,6 +84,15 @@ function LoginForm(props) {
                         event.preventDefault();
                         setLogin(!login)
                         }}>{!login ? "Login?" : "Sign Up?"}</button>
+                </span>
+                <span>
+                    <br />
+                    {
+                        failureMessage !== "" ?
+                        <p id = "failure-message">{failureMessage}</p>
+                        :
+                        ""
+                    }
                 </span>
             </form>
 

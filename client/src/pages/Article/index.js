@@ -57,11 +57,19 @@ function Article() {
             return(
                 imgSplit.map(item => {
                     if (item.indexOf("###IMG") !== -1) {
-                        let imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim();
+                        let imgSrc = "";
+                        if (item.indexOf("LINK") !== -1) {
+                            imgSrc = item.slice(12, item.indexOf("###]")).trim();
+                        }
+
+                        else {
+                            imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim();
+                        }
 
                         let alt = article.title;
                         return <img alt = {alt} src = {imgSrc} />
                     }
+                
                     else {
                         return <p>{item}</p>
                     }

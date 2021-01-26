@@ -26,8 +26,6 @@ function Article() {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        // window.addEventListener("scroll", handleScroll);
-        // window.addEventListener("resize", handleResize);
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             setTitle(data.title);

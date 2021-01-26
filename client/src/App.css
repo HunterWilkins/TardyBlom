@@ -58,6 +58,10 @@ html {
     background: var(--background-color);
 }
 
+
+/* Imports */
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap');
+
 .dark-mode {
     --background-color: #0b0b0c;    
     --background-color-half: #0b0b0cd8;
@@ -94,7 +98,13 @@ html {
 
 #root {
     
-    font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
+    /* font-family: 'Noto Sans JP', sans-serif; */
+
+    /* font-family: "Hind", sans-serif; */
+    /* font-family: 'Teko', sans-serif; */
+
+    /* font-family: sans-serif; */
 
     display: flex;
     flex-direction: column;

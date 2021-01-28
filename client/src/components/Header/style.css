@@ -2,7 +2,8 @@ header {
   /* position: sticky; */
   /* top: 0; */
   color: var(--alt-color);
-  padding:15px;
+  padding:0 15px;
+  height: 50px;
   display: flex;
   align-items: center;
   background: var(--background-color);
@@ -15,7 +16,6 @@ header {
 }
 
 #login-prompt {
-
   cursor: pointer;
   font-size: 16px;
   padding: 4px 0;

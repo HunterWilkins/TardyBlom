@@ -9,7 +9,7 @@ import Nav from "../Nav";
 
 function Header({mobileWidth}) {
 
-    const [loginState, dispatch] = useGlobalContext();
+    const [state, dispatch] = useGlobalContext();
     const [modal, setModal] = useState(false);
 
     function handleLogout() {
@@ -18,9 +18,16 @@ function Header({mobileWidth}) {
         }))
     }
 
+    function resetGenre() {
+        dispatch({
+            type: "genre",
+            genre: ""
+        });
+    }
+
     return(
         <header>
-            <Link to = "/home" id = "logo">Tardyblom</Link>
+            <Link to = "/home" id = "logo" onClick = {resetGenre}>Tardyblom</Link>
             {
                 mobileWidth ?
                 ""
@@ -28,7 +35,7 @@ function Header({mobileWidth}) {
                 <Nav />
             }
             {
-                loginState.username ? 
+                state.username ? 
                 <button className = "darkbutton" onClick = {() => handleLogout()}>Logout</button>
                 :
                 <p id = "login-prompt" onClick = {() => setModal(!modal)}>Login / Signup</p>

@@ -18,15 +18,7 @@ function Nav() {
     const [articles, setArticles] = useState(false);
     // let filteredArticles = articles ? articles.filter(article => article.genre === genre) : [];
 
-    useEffect(() => {
-        API.getArticles().then(function(response) {
-            setArticles(response.data.rows);
-            dispatch({
-                type: "getArticles",
-                articles: response.data.rows
-            });
-        });
-    }, []);
+   
 
     function setUpGenre(genre) {
         dispatch({

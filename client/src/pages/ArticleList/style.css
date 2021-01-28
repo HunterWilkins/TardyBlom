@@ -1,5 +1,39 @@
-#article-list {
+#article-list-wrapper {
     width: 500px;
+    flex: 1;
+    align-self: center;
+}
+
+#article-list {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+}
+
+#pagination {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#pagination img{
+    width: 20px;
+    cursor: pointer;
+}
+
+#backpage {
+    margin-right: 15px;
+    transform: rotateZ(180deg);
+}
+
+#pagination p {
+    font-size: 14px;
+    flex: 1;
+}
+
+.deactivated {
+    display: none;
 }
 
 .article-link {
@@ -32,7 +66,7 @@
 }
 
 @media only screen and (max-width: 500px) {
-    #article-list {
+    #article-list-wrapper {
         width: 100%;
     }
 }

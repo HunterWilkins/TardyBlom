@@ -5,8 +5,12 @@ const API = {
         return axios.get("/api/posts/");
     },
     
-    getArticles: function() {
-        return axios.get("/api/articles");
+    getArticles: function(page, genre) {
+        console.log(genre);
+        return axios.post("/api/articles/list/" + page, 
+        {
+            genre: genre
+        });
     },
 
     getArticle: function(id) {

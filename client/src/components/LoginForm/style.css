@@ -102,7 +102,12 @@ input[placeholder=Username] {
     font-size: 28px;
 }
 
+#failure-box {
+    max-width: 200px;
+}
+
 #failure-message {
     animation-name: revealFailure;
     animation-duration: .25s;
+    font-size: 16px;
 }

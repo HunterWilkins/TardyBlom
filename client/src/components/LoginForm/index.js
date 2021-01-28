@@ -31,31 +31,19 @@ function LoginForm(props) {
 
     function handleLogin(event) {
         event.preventDefault();
-        if (login) {
-            API.login(state).then(response => {
-                dispatch({
-                    type: "login", 
-                    username: response.data.username, 
-                    userId: response.data.id
-                });
-                setFailureMessage("");
-                props.closeModal();    
-                
-            }).catch((err) => {
-                console.log(err);
-                
-                setFailureMessage("Incorrect Credentials");
-                
-            });    
-        }
 
+        if (state.email === "" || state.password === "") {
+            if (state.username === "" && !login) {
+                setFailureMessage("All fields must be filled.");
+            }
+            else {
+                setFailureMessage("Your email and password cannot be blank!");
+            }
+        }
         else {
-            API.signup(state).then(response => {
-                console.log(response);
-                if (response.data.message) {
-                    setFailureMessage(response.data.message);
-                }
-                else {
+
+            if (login) {
+                API.login(state).then(response => {
                     dispatch({
                         type: "login", 
                         username: response.data.username, 
@@ -63,12 +51,37 @@ function LoginForm(props) {
                     });
                     setFailureMessage("");
                     props.closeModal();    
-                }
-            }).catch((err) => {
-                console.log(err);
-                setFailureMessage("");
-            });
-        }
+                    
+                }).catch((err) => {
+                    console.log(err);
+                    
+                    setFailureMessage("Incorrect Credentials");
+                    
+                });    
+            }
+
+            else {
+                API.signup(state).then(response => {
+                    console.log(response);
+                    if (response.data.message) {
+                        setFailureMessage(response.data.message);
+                    }
+                    else {
+                        dispatch({
+                            type: "login", 
+                            username: response.data.username, 
+                            userId: response.data.id
+                        });
+                        setFailureMessage("");
+                        props.closeModal();    
+                    }
+                }).catch((err) => {
+                    console.log(err);
+                    setFailureMessage("");
+                });
+            }
+    }
+
     }
 
     return(
@@ -85,7 +98,7 @@ function LoginForm(props) {
                         setLogin(!login)
                         }}>{!login ? "Login?" : "Sign Up?"}</button>
                 </span>
-                <span>
+                <span id = "failure-box">
                     <br />
                     {
                         failureMessage !== "" ?

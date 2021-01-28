@@ -22,6 +22,11 @@ const reducer = (state, action) => {
                 ...state,
                 posts: action.posts
             }
+        case "addToPosts":
+            return {
+                ...state,
+                posts: state.posts.concat(action.posts)
+            }
         case "clearPosts":
             return {
                 ...state,

@@ -10,21 +10,53 @@ function Frontpage() {
 
     const [state, dispatch] = useGlobalContext();
     const [asideFixed, setAsideFixed] = useState(false);
+    const [postPage, setPostPage] = useState(0);
+    const [isBottom, setBottom] = useState(false);
+    const [max, setMax] = useState(0);
     // const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        API.getPosts()
+        API.getPosts(postPage)
         .then(({data}) => {
             console.log(data);
+            setMax(data.count);
             dispatch({
                 type: "getPosts",
                 posts: data.rows
-            })
-        }
-        );
+            });
+            // window.addEventListener("scroll", handleScroll);
+        });
+
     }, []);
 
-
+    // function handleScroll() {
+    //     console.log(max + " " + state.posts);
+    //     const isBottom = Math.ceil(window.innerHeight + document.documentElement.scrollTop) >= document.documentElement.offsetHeight;
+    //     // if (isBottom) {
+    //     //     addPosts();
+    //     // }
+    //     if (isBottom) {
+    //         addPosts();
+    //     }
+    //     // setBottom(isBottom);      
+    // }
+      
+    function addPosts() {
+    
+        if (state.posts.length < max && state.posts.length !== 0) {
+            console.log(state.posts.length < max);
+            API.getPosts(postPage + 1)
+            .then(({data}) => {
+                // console.log(data.rows);
+                // console.log(state.posts);
+                // console.log(state.posts.concat(data.rows));
+                dispatch({
+                    type: "addToPosts",
+                    posts: data.rows
+                });
+            })    
+        }
+    }
 
     function capitalize(string) {
         try {
@@ -56,6 +88,7 @@ function Frontpage() {
                 : 
                 <p>There don't appear to be any posts.</p>
             }
+            <button id = "see-more-posts" style = {state.posts.length < max ? {"display":"block"} : {"display":"none"}}onClick = {addPosts}>~ See More ~</button>
             </div>
 
             <div id = "spacer">

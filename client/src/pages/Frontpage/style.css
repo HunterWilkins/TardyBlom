@@ -12,6 +12,16 @@
     margin-right: 30px;
 }
 
+#see-more-posts {
+    font-size: 18px;
+    padding: 5px;
+    background: var(--layer2);
+    border: none;
+
+    color: var(--text-color);
+
+}
+
 #spacer {
     position: sticky;
     top: 15px;

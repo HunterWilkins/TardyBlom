@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = {
-    getPosts: function() {
-        return axios.get("/api/posts/");
+    getPosts: function(page) {
+        return axios.get("/api/posts/" + page);
     },
     
     getArticles: function(page, genre) {

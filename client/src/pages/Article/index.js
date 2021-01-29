@@ -58,11 +58,11 @@ function Article() {
                     if (item.indexOf("###IMG") !== -1) {
                         let imgSrc = "";
                         if (item.indexOf("LINK") !== -1) {
-                            imgSrc = item.slice(12, item.indexOf("###]")).trim();
+                            imgSrc = item.slice(item.indexOf(":") + 1, item.indexOf("###]")).trim();
                         }
 
                         else {
-                            imgSrc = "/images/" + item.slice(8, item.indexOf("###]")).trim();
+                            imgSrc = "/images/" + item.slice(item.indexOf(":") + 1, item.indexOf("###]")).trim();
                         }
 
                         let alt = article.title;

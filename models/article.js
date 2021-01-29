@@ -24,5 +24,9 @@ module.exports = function(sequelize, DataTypes) {
         });
     }
 
+    Article.addHook("beforeCreate", function(article) {
+        article.body = article.body.replace(/\t/g, "");
+    });
+
     return Article
 }

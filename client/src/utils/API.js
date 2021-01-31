@@ -17,6 +17,10 @@ const API = {
         return axios.get("/api/articles/" + id);
     },
 
+    searchArticles: function(term, page, genre) {
+        return axios.post("/api/articles/search", {term: term, page: page, genre: genre});
+    },
+
     getComments: function(id) {
         return axios.get("/api/comment/" + id);
     },

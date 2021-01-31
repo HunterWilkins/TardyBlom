@@ -1,6 +1,7 @@
 const db = require("../models");
 const express = require("express");
 const router = express.Router();
+const {Op} = require("sequelize");
 
 router.post("/list/:page", (req, res) => {
     const limit = 5;
@@ -32,6 +33,22 @@ router.get("/:id", (req, res) => {
         }
     }).then(dbPost => res.json(dbPost)).catch(err => res.json(err));
 });
+
+router.post("/search", (req, res) => {
+    const limit = 5;
+    db.Article.findAndCountAll({
+        where: {
+            [Op.or] : [
+                {title: req.body.term},
+                {medium: req.body.term}
+            ]
+        },
+        limit: limit,
+        offset: req.body.page * limit,
+        order: [["id", "DESC"]],
+        attributes: ["title", "id", "createdAt", "updatedAt", "genre", "medium"]
+    }).then(dbArticles => res.json(dbArticles)).catch(err => res.json(err));
+})
 
 // router.post("/", (req, res) => {
 //     db.Article.create(req.body).then(dbPost => res.json(dbPost))

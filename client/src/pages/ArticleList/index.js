@@ -12,6 +12,8 @@ function ArticleList() {
     const limit = 5;
     const [max, setMax] = useState(0);
     const [page, setPage] = useState(0);
+    const [loaded, setLoaded] = useState(false);
+    const [search, setSearch] = useState("");
 
     useEffect(() => {
         if (!state.genre) {
@@ -22,9 +24,10 @@ function ArticleList() {
         }
 
         else {
-            API.getArticles(page, state.genre).then(function(response) {
-                console.log(response);
+            API.getArticles(0, state.genre).then(function(response) {
+                setPage(0);
                 setArticles(response.data.rows);
+                setLoaded(true);
                 setMax(response.data.count);
             });
         }
@@ -33,6 +36,17 @@ function ArticleList() {
     }, [state.genre]);
 
     const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    
+    // function handleInputChange() {
+
+    // }
+
+    // function searchArticles(term){
+    //     API.searchArticles(term, page, state.genre).then(function(response) {
+    //         setArticles(response.data.rows);
+    //         setMax(response.data.count);
+    //     })
+    // }
 
     function fixDate(date) {
         try {
@@ -47,6 +61,7 @@ function ArticleList() {
     }
 
     function flipPage(num) {
+        setLoaded(false);
         setArticles([]);
         console.log(page);
         if ((page + num) < (max / limit) && (page + num) > -1 ) {
@@ -54,11 +69,10 @@ function ArticleList() {
 
             API.getArticles(page + num, state.genre).then(function(response) {
                 setArticles(response.data.rows);
+                setLoaded(true);
                 window.scrollTo(0, 0);
             });
         }
-
-       
     }
 
     function renderArticles() {
@@ -80,12 +94,17 @@ function ArticleList() {
                             )
                         })
                     }                
-                    </div>        
+                    </div> 
                 )                
             }
 
             else {
-                return(<p>No results for {state.genre}.</p>);
+                if (loaded) {
+                    return(<p id = "no-results">No results for {state.genre}</p>);                                    
+                }
+                else {
+                    return(<p id = "no-results">Please Wait...</p>);                                    
+                }
             }
              
         }
@@ -101,8 +120,11 @@ function ArticleList() {
             </Helmet>
             <span id = "pagination">
                 <p>Page {page + 1} / { max > 0 ? Math.ceil(max / limit) : 1}</p>
-                <img className = {page === 0 ? "deactivated" : ""} id = "backpage" src = "/images/forward-arrow.png" onClick = {() => flipPage(-1)} />
-                <img className = {page + 1 === Math.ceil(max / limit) || max <= 0 ? "deactivated" : ""} src = "/images/forward-arrow.png" onClick = {() => flipPage(1)} />
+                {/* <input name = "search" onChange = {handleInputChange} placeholder = "Article Name"/> */}
+                <span id = "arrows">
+                    <img className = {page === 0 ? "deactivated" : ""} id = "backpage" src = "/images/forward-arrow.png" onClick = {() => flipPage(-1)} />
+                    <img className = {page + 1 === Math.ceil(max / limit) || max <= 0 ? "deactivated" : ""} src = "/images/forward-arrow.png" onClick = {() => flipPage(1)} />
+                </span>
             </span>
             <br />
             <hr />

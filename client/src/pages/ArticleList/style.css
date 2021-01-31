@@ -1,3 +1,13 @@
+@keyframes articlePopup {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 #article-list-wrapper {
     width: 500px;
     flex: 1;
@@ -22,6 +32,11 @@
     cursor: pointer;
 }
 
+#arrows {
+    display: flex;
+    justify-content: center;
+}
+
 #backpage {
     margin-right: 15px;
     transform: rotateZ(180deg);
@@ -30,6 +45,16 @@
 #pagination p {
     font-size: 14px;
     flex: 1;
+}
+
+input[name=search] {
+    /* max-width: 200px; */
+    flex: 1;
+    background: var(--background-color);
+    border: none;
+    border-bottom: var(--text-color-half) solid 2px;
+    padding: 8px 15px;
+    color: var(--text-color);
 }
 
 .deactivated {
@@ -42,7 +67,30 @@
     transition: .15s;
     max-width: 500px;
     display: block;
+
+    animation-name: articlePopup;
+    animation-duration: .8s;
 }
+
+/* .article-link delays (inelegant, but functional) */
+
+/* #article-list :nth-child(1) {
+    animation-delay: 0s;
+} */
+/* #article-list :nth-child(2) {
+    animation-delay: .05s;
+}
+#article-list :nth-child(3) {
+    animation-delay: .1s;
+}
+#article-list :nth-child(4) {
+    animation-delay: .15s;
+}
+#article-list :nth-child(5) {
+    animation-delay: .20s;
+} */
+
+/* =/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/=/ */
 
 .article-link .date {
     font-size: 16px;
@@ -63,6 +111,10 @@
 
 .medium[value = "video games"] {
     background: var(--comp-color-1);
+}
+
+#no-results {
+    margin-top: 15px;
 }
 
 @media only screen and (max-width: 500px) {

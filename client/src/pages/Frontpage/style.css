@@ -12,6 +12,15 @@
     margin-right: 30px;
 }
 
+#full-logo-wrapper {
+    align-self: center;
+    width: 200px;
+}
+
+#full-logo {
+    width: 100%;
+}
+
 #see-more-posts {
     font-size: 18px;
     padding: 5px;
@@ -41,6 +50,7 @@
         display: none;
     }
     #posts {
+        margin-right: 0;
         flex: 1;
     }
 }

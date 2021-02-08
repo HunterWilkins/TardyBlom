@@ -5,6 +5,7 @@ import Aside from "../../components/Aside";
 import "./style.css";
 import API from "../../utils/API";
 import {Helmet} from "react-helmet";
+import Image from "./Tardyblom Logo Full.png";
 
 function Frontpage() {
 
@@ -73,7 +74,11 @@ function Frontpage() {
             <Helmet>
                 <title>Tardyblom Home</title>
             </Helmet>
+            
             <div id = "posts">
+                {/* <figure id = "full-logo-wrapper">
+                    <img id = "full-logo" src = {Image} />
+                </figure> */}
             {
                 state.posts.length > 0 ?
                 state.posts.map(post => {

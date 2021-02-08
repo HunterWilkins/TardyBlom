@@ -73,6 +73,7 @@ function Frontpage() {
         <div id = "frontpage">
             <Helmet>
                 <title>Tardyblom Home</title>
+                <link rel = "icon" href = "/images/logo.png"></link>
             </Helmet>
             
             <div id = "posts">

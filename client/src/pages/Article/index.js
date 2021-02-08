@@ -121,9 +121,16 @@ function Article() {
             <Helmet>
                 {
                     title !== "" ?
+                    <>
                     <title>{title} | tardyblom.com</title>
+                    <link rel = "icon" href = "/images/logo.png"></link>
+                    </>
+                    
                     :
+                    <>
                     <title>Article | tardyblom.com</title>
+                    <link rel = "icon" href = "/images/logo.png"></link>
+                    </>
                 }
             </Helmet>
             <article>

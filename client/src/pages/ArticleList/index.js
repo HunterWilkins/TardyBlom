@@ -117,6 +117,7 @@ function ArticleList() {
         <div id = "article-list-wrapper">
             <Helmet>
                 <title>Articles | tardyblom.com</title>
+                <link rel = "icon" href = "/images/logo.png"></link>
             </Helmet>
             <span id = "pagination">
                 <p>Page {page + 1} / { max > 0 ? Math.ceil(max / limit) : 1}</p>

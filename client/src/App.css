@@ -55,7 +55,7 @@ em {
 }
 
 html {
-    background: var(--background-color);
+    background: black;
 }
 
 
@@ -112,6 +112,7 @@ html {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: hidden;
     /* position: fixed;
     top: 0;
     left: 0;

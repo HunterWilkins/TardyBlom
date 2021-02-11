@@ -26,7 +26,7 @@ function LoginForm(props) {
             ...state,
             [event.target.placeholder.toLowerCase()]: event.target.value
         });
-        console.log(state);
+        // console.log(state);
     }
 
     function handleLogin(event) {
@@ -53,7 +53,7 @@ function LoginForm(props) {
                     props.closeModal();    
                     
                 }).catch((err) => {
-                    console.log(err);
+                    // console.log(err);
                     
                     setFailureMessage("Incorrect Credentials");
                     
@@ -62,7 +62,7 @@ function LoginForm(props) {
 
             else {
                 API.signup(state).then(response => {
-                    console.log(response);
+                    // console.log(response);
                     if (response.data.message) {
                         setFailureMessage(response.data.message);
                     }
@@ -76,7 +76,7 @@ function LoginForm(props) {
                         props.closeModal();    
                     }
                 }).catch((err) => {
-                    console.log(err);
+                    // console.log(err);
                     setFailureMessage("");
                 });
             }

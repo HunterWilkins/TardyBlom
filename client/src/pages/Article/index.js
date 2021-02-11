@@ -28,7 +28,7 @@ function Article() {
     useEffect(() => {
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
-            console.log(data);
+            // console.log(data);
             setTitle(data.title);
             
             // let newBody = spacedBody.replace(/\[.*?\]/g, "<img src = 'https://gamerdame.files.wordpress.com/2011/06/rof2.jpg' alt = " + imgLink + "/>")

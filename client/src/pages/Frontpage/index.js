@@ -19,7 +19,7 @@ function Frontpage() {
     useEffect(() => {
         API.getPosts(postPage)
         .then(({data}) => {
-            console.log(data);
+            // console.log(data);
             setMax(data.count);
             dispatch({
                 type: "getPosts",
@@ -45,7 +45,7 @@ function Frontpage() {
     function addPosts() {
     
         if (state.posts.length < max && state.posts.length !== 0) {
-            console.log(state.posts.length < max);
+            // console.log(state.posts.length < max);
             API.getPosts(postPage + 1)
             .then(({data}) => {
                 // console.log(data.rows);

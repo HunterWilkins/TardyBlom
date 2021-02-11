@@ -63,7 +63,7 @@ function ArticleList() {
     function flipPage(num) {
         setLoaded(false);
         setArticles([]);
-        console.log(page);
+        // console.log(page);
         if ((page + num) < (max / limit) && (page + num) > -1 ) {
             setPage(page + num);
 

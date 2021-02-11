@@ -6,7 +6,7 @@ const API = {
     },
     
     getArticles: function(page, genre) {
-        console.log(genre);
+        // console.log(genre);
         return axios.post("/api/articles/list/" + page, 
         {
             genre: genre

@@ -107,6 +107,7 @@ html {
     /* font-family: 'Teko', sans-serif; */
 
     /* font-family: sans-serif; */
+    background: var(--background-color);
 
     display: flex;
     flex-direction: column;

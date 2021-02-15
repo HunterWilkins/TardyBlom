@@ -12,11 +12,11 @@ function Header({mobileWidth}) {
     const [state, dispatch] = useGlobalContext();
     const [modal, setModal] = useState(false);
 
-    function handleLogout() {
-        API.logout().then(dispatch({
-            type: "logout"
-        }))
-    }
+    // function handleLogout() {
+    //     API.logout().then(dispatch({
+    //         type: "logout"
+    //     }))
+    // }
 
     function resetGenre() {
         dispatch({
@@ -34,7 +34,7 @@ function Header({mobileWidth}) {
                 :
                 <Nav />
             }
-            {
+            {/* {
                 state.username ? 
                 <button className = "darkbutton" onClick = {() => handleLogout()}>Logout</button>
                 :
@@ -45,7 +45,7 @@ function Header({mobileWidth}) {
                 <LoginForm modal = {modal} closeModal = {() => setModal(false)}/>
                 :
                 ""
-            }
+            } */}
         </header>
     );
 }

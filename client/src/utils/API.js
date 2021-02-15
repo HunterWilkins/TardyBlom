@@ -25,20 +25,20 @@ const API = {
         return axios.get("/api/comment/" + id);
     },
 
-    login: function(body) {
-        return axios.post("/api/user/login", body);
-    },
+    // login: function(body) {
+    //     return axios.post("/api/user/login", body);
+    // },
 
-    signup: function(body) {
-        return axios.post("/api/user/signup", body);
-    },
+    // signup: function(body) {
+    //     return axios.post("/api/user/signup", body);
+    // },
 
-    logout: function() {
-        return axios.get("/api/user/logout");
-    },
-    checkLoggedIn: function() {
-        return axios.get("/api/user/check");
-    },
+    // logout: function() {
+    //     return axios.get("/api/user/logout");
+    // },
+    // checkLoggedIn: function() {
+    //     return axios.get("/api/user/check");
+    // },
 
     postComment: function(comment) {
         return axios.post("/api/comment", comment);

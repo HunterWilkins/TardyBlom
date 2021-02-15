@@ -120,18 +120,19 @@ function Article() {
         <div>
             <Helmet>
                 {
-                    title !== "" ?
-                    <>
-                    <title>{title} | tardyblom.com</title>
-                    <link rel = "icon" href = "/images/logo.png"></link>
-                    </>
+                    // title ?
+                    // <>
+                    // <title>{title} | tardyblom.com</title>
+                    // <link rel = "icon" href = "/images/logo.png"></link>
+                    // </>
                     
-                    :
-                    <>
-                    <title>Article | tardyblom.com</title>
-                    <link rel = "icon" href = "/images/logo.png"></link>
-                    </>
+                    // :
+                    // <>
+                   
+                    //</>
                 }
+                <title>Article | tardyblom.com</title>
+                <link rel = "icon" href = "/images/logo.png"></link>
             </Helmet>
             <article>
             {
@@ -151,7 +152,7 @@ function Article() {
              <p>Please Wait...</p>
             }
             </article>
-            {
+            {/* {
             state.userId ? 
             <CommentBox articleId = {window.location.pathname.split("/")[2]} />
             :
@@ -174,7 +175,7 @@ function Article() {
             
                 }
             </div>
-           
+            */}
             {
              
                 

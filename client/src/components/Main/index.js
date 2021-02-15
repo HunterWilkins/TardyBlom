@@ -4,17 +4,17 @@ import {useGlobalContext} from "../../utils/GlobalContext";
 import API from "../../utils/API";
 
 function Main(props) {    
-    const [state, dispatch] = useGlobalContext();
+    // const [state, dispatch] = useGlobalContext();
 
-    useEffect(() => {
-        API.checkLoggedIn().then((response) => {
-            dispatch({
-                type: "login",
-                username: response.data.username,
-                userId: response.data.id
-            });
-        })
-    }, [])
+    // useEffect(() => {
+    //     API.checkLoggedIn().then((response) => {
+    //         dispatch({
+    //             type: "login",
+    //             username: response.data.username,
+    //             userId: response.data.id
+    //         });
+    //     })
+    // }, [])
 
     return(
         <main {...props}>

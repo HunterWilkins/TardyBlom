@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import {useGlobalContext} from "../../utils/GlobalContext";
+import { ReactMarkdown as Markdown} from "react-markdown/lib/react-markdown";
 import API from "../../utils/API";
 import CommentBox from "../../components/CommentBox";
 import Comment from "../../components/Comment";
@@ -29,14 +30,14 @@ function Article() {
         API.getArticle(window.location.pathname.split("/")[2])
         .then(({data}) => {
             // console.log(data);
-            setTitle(data.title);
+            setTitle(data.article.title);
             
             // let newBody = spacedBody.replace(/\[.*?\]/g, "<img src = 'https://gamerdame.files.wordpress.com/2011/06/rof2.jpg' alt = " + imgLink + "/>")
             // console.log(splitBody);
             // let newBodyWithImg = newBody.replace(/###LINK/g, )
             setArticle({
-                ...data,
-                newBody: data.body
+                ...data.article,
+                markdown: data.markdown
             });
             setLoaded(true);
         });
@@ -48,37 +49,11 @@ function Article() {
     }, [state.article]);
 
     function renderBody() {
-        article.newBody = article.newBody.trimEnd();
-        if (article.newBody.indexOf("###IMG") !== -1) {  
-            let trimbody = article.newBody.replace(/\t/g, "");      
-            let spacedBody =  "\t" + trimbody.replace(/\n/g, "\n\n\t");
-            let imgSplit = spacedBody.split(/(\[\#\#\#IMG.*?\#\#\#\]+)/);
-            return(
-                imgSplit.map(item => {
-                    if (item.indexOf("###IMG") !== -1) {
-                        let imgSrc = "";
-                        if (item.indexOf("LINK") !== -1) {
-                            imgSrc = item.slice(item.indexOf(":") + 1, item.indexOf("###]")).trim();
-                        }
-
-                        else {
-                            imgSrc = "/images/" + item.slice(item.indexOf(":") + 1, item.indexOf("###]")).trim();
-                        }
-
-                        let alt = article.title;
-                        return <img alt = {alt} src = {imgSrc} />
-                    }
-                
-                    else {
-                        return <p>{item}</p>
-                    }
-                })
-            );
-        }
-
-        else {
-            return <p>{article.newBody}</p>
-        } 
+        return (
+            <Markdown>
+                {article.markdown}
+            </Markdown>
+        )
     }
 
     function fixDate(date) {
@@ -131,7 +106,7 @@ function Article() {
                    
                     //</>
                 }
-                <title>Article | tardyblom.com</title>
+                <title>{title}</title>
                 <link rel = "icon" href = "/images/logo.png"></link>
             </Helmet>
             <article>

@@ -30,9 +30,11 @@ app.use("/api/comment", controllers.comment);
 app.use("/api/articles", controllers.article);
 app.use("/api/user", controllers.user);
 
-app.get("*", (req, res) => {
-    res.sendFile(path.join(__dirname, "/client/build", "index.html"));
-});
+if (process.env.NODE_ENV === "production") {
+    app.get("*", (req, res) => {
+        res.sendFile(path.join(__dirname, "/client/build", "index.html"));
+    });    
+}
 
 db.sequelize.sync().then(function(){
     app.listen(PORT, () => {

@@ -14,7 +14,7 @@ router.post("/list/:page", (req, res) => {
             },
             limit: limit,
             offset: req.params.page * limit,
-            order: [["id", "DESC"]],
+            order: [["createdAt", "DESC"]],
             attributes: ["title", "id", "createdAt", "updatedAt", "genre", "medium"]
         }
     ).then(dbArticles => {   

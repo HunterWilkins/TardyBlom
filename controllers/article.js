@@ -1,4 +1,6 @@
 const db = require("../models");
+const fs = require("fs");
+const path = require("path");
 const express = require("express");
 const router = express.Router();
 const {Op} = require("sequelize");
@@ -12,7 +14,7 @@ router.post("/list/:page", (req, res) => {
             },
             limit: limit,
             offset: req.params.page * limit,
-            order: [["id", "DESC"]],
+            order: [["createdAt", "DESC"]],
             attributes: ["title", "id", "createdAt", "updatedAt", "genre", "medium"]
         }
     ).then(dbArticles => {   
@@ -22,16 +24,25 @@ router.post("/list/:page", (req, res) => {
     }).catch(err => res.json(err));
 });
 
-router.get("/:id", (req, res) => {
-    // console.log("THIS IS TEH TITLE OF THE THING \n\n\n\n\n\n");
-    // console.log(req.params.title);
-    // let urlToTitle = req.params.title.replace(/_/g, " ");
-    // console.log(urlToTitle);
+router.get("/:id", async (req, res) => {
     db.Article.findOne({
         where: {
             id: req.params.id
         }
-    }).then(dbPost => res.json(dbPost)).catch(err => res.json(err));
+    }).then(async (article) => {
+        fs.readFile(path.join(__dirname, `../client/src/assets/articles/${article.body}`), 
+        "utf-8",
+            (err, data) => {
+                if (err) {
+                    console.log(err);
+                }
+                res.json({article, markdown: data});
+            });
+        
+
+
+    }).catch(err => res.json(err));
+
 });
 
 router.post("/search", (req, res) => {

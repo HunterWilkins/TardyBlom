@@ -15,6 +15,11 @@ h3 {
     font-size: 24px;
 }
 
+ol, ul {
+    padding-left: 3em;
+    text-indent: 1em;
+}
+
 hr {
     border: none;
     border-bottom: var(--comp-color-1) dashed 3px;

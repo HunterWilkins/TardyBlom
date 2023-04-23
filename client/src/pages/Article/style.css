@@ -41,6 +41,10 @@ article {
     animation-duration: 1s;
 }
 
+.article-image-handler img {
+    border: none;
+}
+
 #date {
     margin-top: 15px;
     font-size: 16px;

@@ -50,7 +50,7 @@ function Article() {
 
     function renderBody() {
         return (
-            <Markdown>
+            <Markdown className = "article-image-handler">
                 {article.markdown}
             </Markdown>
         )

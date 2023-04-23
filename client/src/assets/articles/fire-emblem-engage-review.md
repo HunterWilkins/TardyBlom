@@ -220,7 +220,13 @@ And that's only for the "Bond Conversations," the most milquetoast and unnecessa
 
 AND...THEY HAVE TO LOCALIZE THIS INTO DIFFERENT LANGUAGES.
 
-Three Houses had this a bit easier, because instead of thirty-five party members, you had ThiRtY-ThReE!!! No, it's easier because the majority of the cast (the students) really only needed to interact within their group, not the entire student body. It was done intelligently, and still found a way to make each character more than a trope (in most cases). The story wasn't about the power of friendship, it was about the unfairness and illogical nature of war, which is why the permadeath system was more poignant and less pointless. Even then, in Casual mode, you can still end up killing characters you love. In fact, if you play your cards wrong, you could end up murdering two-thirds of the student body!
+Three Houses had this a bit easier, because instead of thirty-five party members, you had ThiRtY-ThReE!!! No, it's easier because the majority of the cast (the students) really only needed to interact within their group, not the entire student body. 
+
+EDIT: It's come to my attention that this is not the case, and that all the students did interact with each other. 
+
+...THEN WHY ARE THEY SO WELL-WRITTEN IN THREE HOUSES AND NOT HERE? I DON'T KNOW!
+
+It was done intelligently, and still found a way to make each character more than a trope (in most cases). The story wasn't about the power of friendship, it was about the unfairness and illogical nature of war, which is why the permadeath system was more poignant and less pointless. Even then, in Casual mode, you can still end up killing characters you love. In fact, if you play your cards wrong, you could end up murdering two-thirds of the student body!
 
 In Engage, the permadeath system would only emphasize the disposability of the cast. "We need a lot of bodies so that the player isn't screwed halfway through the game." That's evil antagonist dragon thinking, right there, and goes directly against the central thesis of the game: that the bonds between people matter. They don't actually matter in the story, it's really only the number of sword-wielding hands.
 

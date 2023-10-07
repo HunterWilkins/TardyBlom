@@ -80,8 +80,7 @@ Quickly,
 
 he built the patache and took to the sea
 
-The day after,
-left by stagecoach then by train
+The day after, left by stagecoach then by train
 
 We go,
 
@@ -104,8 +103,10 @@ in which the journey through the Earth will be made conveniently
 
 the journey of the Earth..."
 
+---
 And then, our course is set:
 
+---
 "From the Earth to the moon!"
 
 ---
@@ -126,8 +127,7 @@ Today it's railways, hot air balloons, airplanes"
 Then, the men join in, with heavy marcato brass:
 
 ---
-"Tomorrow we will build lots of rockets in which it will be
-soon 
+"Tomorrow we will build lots of rockets in which it will be soon 
 
 the trip from the Earth to the moon!
 

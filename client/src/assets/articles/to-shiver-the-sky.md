@@ -30,19 +30,24 @@ Already you can see what I mean when I frame this as a young human achieving his
 
 Then, after the dream, comes the speculation. *The Heavenly Kingdom*, the mysterious, aetherial realm overhead. The lyrics were taken from *Scivias*, the prophetic writings of Hildegard von Bingen, who had visions of heaven and the soul leaving the body. Though Hildegard was German, the lyrics are in latin, and the translation to English communicates the desire to depart from Earth and seek the heavens.
 
+
 "Who are they that fly in the clouds? And like doves to their windows? 
 
 It is said that they are those who, with full desire and full devotion, fly to heaven."
+
 
 And then we get to *Daedalus and Icarus*, one of the most powerful pieces of the album, depicting the classic myth of Icarus's flight toward the sun, simultaneously painting a story of determination, strength, and fear as the threats of such endeavors come to light. 
 
 After Icarus's failure, we're led into *The Fall*, with lyrics taken from the Divine Comedy. The song is a somber, wailing affair that starts with the (roughly) translated:
 
+
 "People, human, to fly up, born, why, to a little wind, so fall?"
+
 
 Though I (and google translate) can't do a particularly good job at getting the exacts here, it's clearly lamenting the seemingly impossible nature of flight, and the catastrophic results with our fledgling wings. 
 
 But the song continues (taken straight from the Divine Comedy, and trimmed to fit what the lyrics were communicating):
+
 
 "Rise. Conquer your panting with the soul that wins every battle if the heavy body does not weigh one down. 
 
@@ -51,6 +56,7 @@ There is a longer ladder that must be climbed.
 We climbed, he first, I following his steps, until on our view the beautiful lights of heaven dawned through a circular opening in the cave:
 
 and thence we came forth to see again the stars."
+
 
 No points go to whomever can tell me why the last verse was included. 
 
@@ -61,6 +67,7 @@ And then we get to my second favorite piece of the entire album: *To the Stars*.
 Here, the story changes. With our newfound knowledge, we also have a newfound goal, one that, through advancements in science, math, and technology, *can* be reached. 
 
 It starts with an uplifting, almost childish imaginative tone, sung by an all-women's choir in French:
+
 
 "Man began by traveling
 on all fours,
@@ -83,9 +90,11 @@ We're going to travel to the Moon,
 We will go to the planets, we will go to the stars!
 Stars!"
 
+
 Then, the music changes.
 
 The horns come in, determined, as if we're telling our laughing friend that we're serious, and it repeats the recounting of how man learns to walk, adding in ruminations on how we'll evolve next, slowly fading back into jovialty:
+
 
 "We will soon establish rocket-shaped trains
 in which the journey through the Earth will be made conveniently
@@ -96,9 +105,11 @@ And then, our course is set:
 
 "From the Earth to the moon!"
 
+
 A triumphant note! 
 
 We're back to determination, building up the chant that we've established with even further optimistic fervor:
+
 
 "Man began by traveling on four legs,
 
@@ -108,29 +119,32 @@ advance by cart, coach, patache, and stagecoach
 
 Today it's railways, hot air balloons, airplanes"
 
+
 Then, the men join in, with heavy marcato brass:
+
 
 "Tomorrow we will build lots of rockets in which it will be
 soon 
 
 the trip from the Earth to the moon!
 
-From the Moon to the heavens,
-and from the heavens to the clouds,
-from the clouds to the Earth,
+From the Moon to the heavens, and from the heavens to the clouds, from the clouds to the Earth,
 
-And from there, set off
-far into space"
+And from there, set off far into space"
+
 
 Ending with a gentle, but determined declaration:
 
+
 "To the stars!"
+
 
 Lyrically, this is my absolute favorite of the whole album. The sheer joyfulness, certainty, and power with which these hopeful words are sung legitimately chokes me up. I heard this several times without knowing what the words meant, but when I translated them out of sheer curiosity, that's when the entirety of this album clicked, the whole meaning behind it, its retelling of humanity's journey as a stumbling, ever-present desire to shiver the skies. That's when I knew I had to write this article, I had to gush about it to *somebody*.
 
 But we're not done yet. The next song is entitled, "Oh the Humanity," referencing the tragedy of the Hindenburg disaster, a dirigible that catastrophically erupted in flight. A challenge to the hopefulness and certainty that *To the Stars* established.
 
 Immediately following, though, come the famous (and here, paraphrased) words of Amelia Earhart, in the song titled simply "Courage."
+
 
 "Courage is the price that life exacts for granting peace
 
@@ -142,7 +156,7 @@ Nor mountain heights where bitter joy
 
 Can hear the sound of wings
 
-<br>
+
 
 How can life grant us boon of living
 
@@ -152,7 +166,7 @@ And pregnant hate,
 
 Unless we dare the soul's dominion?
 
-<br>
+
 
 Each time we make a choice, we pay with courage,
 
@@ -160,11 +174,12 @@ To behold the resistless day
 
 And count it fair
 
-<br>
+
 
 Courage
 
 Courage is the price that life exacts."
+
 
 A gentle reassurance that, though scarred by the fear of this tragedy, we can still arise with courage.
 
@@ -183,6 +198,7 @@ Here, the narrative has changed. From the fantastical daydreams, to determined a
 It's no longer a matter of "if." We now have the means, we've done the math, and we're willing to risk it until we get there.
 
 The lyrics are taken (and edited, slightly) from JFK's "We Choose to Go to the Moon" speech, dramatized with operatic fervor and orchestral embellishments to deliver an absolutely jaw-droppingly powerful climax to the story this album has been telling. The seed of thousands of years of human achievement and effort is now coming to fruition, and the only question left to answer is "why," a question that is *immediately* answered and discarded.
+
 
 "Many years ago the great British explorer George Mallory,
 
@@ -209,7 +225,9 @@ And new hopes for knowledge
 
 And peace are there!"
 
+
 At first, the rather blunt and modern language used in the speech feels at odds with the beauty of the music. However, just as the beginning of the album emphasizes the start of humanity's infatuation with the stars in its infancy, the modern language here emphasizes the gulf of time between then and now, exactly how long it took to achieve our journey to the moon, to the point where, after all this pining, we had only relatively recently accomplished it.
+
 
 "*We choose to go to the moon!* 
 
@@ -227,7 +245,9 @@ Dangerous and
 
 Greatest adventure on which man has ever embarked!"
 
+
 And that's what's so powerful about this whole thing: it's not just the story of our *dreams*, or *ambitions*, it's a story about how we actually *achieved* them! We did it! After so long, we broke out of our atmosphere and planted our flag on an orbiting satellite that some cultures once worshipped as a god. And *We Choose to Go to the Moon* takes that importance and hoists it high, ending the album and the age-old story with a choir singing:
+
 
 "We choose the moon,
 
@@ -237,7 +257,7 @@ We choose the sky,
 
 We choose to go!
 
-<br>
+
 
 We choose to go!
 
@@ -246,6 +266,7 @@ We choose to go!
 We choose to
 
 Go!"
+
 
 As if they just *can't wait* to finally achieve their destiny!
 

@@ -209,8 +209,7 @@ Who was to die on Mount Everest, was asked
 
 Why did he want to climb it?
 
-(He said,)
-'Because it's there.'
+(He said,) 'Because it's there.'
 
 Because it's there!
 

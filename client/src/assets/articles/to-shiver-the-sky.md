@@ -4,15 +4,15 @@ That dream never left him, not as he learned to walk, nor when he fell, no matte
 
 Then, the day came when the goal was not only identifiable, but attainable. And what did he do? He leapt up and took it.
 
-That young man was called "humanity," and that's the journey <em>To Shiver the Sky</em> takes its listener on.
+That young man was called "humanity," and that's the journey *To Shiver the Sky* takes its listener on.
 
-For those who are unaware (like I was a few weeks ago), <em>To Shiver the Sky</em> is a classical music album by composer Christopher Tin, a man I never knew existed until Amazon Music decided I'd like to hear "Hope is the thing with Feathers," a pretty good song from one of his later albums.
+For those who are unaware (like I was a few weeks ago), *To Shiver the Sky* is a classical music album by composer Christopher Tin, a man I never knew existed until Amazon Music decided I'd like to hear "Hope is the thing with Feathers," a pretty good song from one of his later albums.
 
-<em>To Shiver the Sky</em> was (and might still be) the highest-grossing Kickstarter-backed classical music project ever, and it deserves every single solitary penny that was donated to it. I cannot think of a time when music felt this powerful, this hopeful, or epic. Jonathan Coulton's "Space Doggity" accomplished a rare feat of making me cry by talking about a dog who was sent into space to die in the name of science, but that's a fairly easy task given the subject matter. <em>To Shiver the Sky</em> made me cry multiple times not by tragedy, but triumph, inciting within me the burning pride for how far humanity has come and what we've accomplished. I <em>devour</em> that kind of messaging, and it's so horribly rare these days. 
+*To Shiver the Sky* was (and might still be) the highest-grossing Kickstarter-backed classical music project ever, and it deserves every single solitary penny that was donated to it. I cannot think of a time when music felt this powerful, this hopeful, or epic. Jonathan Coulton's "Space Doggity" accomplished a rare feat of making me cry by talking about a dog who was sent into space to die in the name of science, but that's a fairly easy task given the subject matter. *To Shiver the Sky* made me cry multiple times not by tragedy, but triumph, inciting within me the burning pride for how far humanity has come and what we've accomplished. I *devour* that kind of messaging, and it's so horribly rare these days. 
 
 There's a good chance you reading this will listen to the album and go, "yeah, that was excellent...but tear-jerking? I don't know, man." I'd like to humbly request that you keep your tiny trap shut and let me fanboy in peace, capiche?
 
-The opening for this article isn't just a creative writing prompt, it's legitimately the story of <em>To Shiver the Sky</em>, told through several languages, emphasizing how the urge to venture into the heavens has been a desire shared between every culture. The tracklist is as follows:
+The opening for this article isn't just a creative writing prompt, it's legitimately the story of *To Shiver the Sky*, told through several languages, emphasizing how the urge to venture into the heavens has been a desire shared between every culture. The tracklist is as follows:
 
 1. Sogno di Volare - "The Dream of Flight"
 2. The Heavenly Kingdom
@@ -26,17 +26,17 @@ The opening for this article isn't just a creative writing prompt, it's legitima
 10. The Power of the Spirit
 11. We Choose to Go to the Moon
 
-Already you can see what I mean when I frame this as a young human achieving his dreams. It all starts with the dream, <em>Sogno di Volare</em>, which is apparently also the theme song of <em>Civilization VI</em>, a rather famous strategy video game. I...don't know <em>why</em> it's the theme song for *Civilization VI*, but maybe it makes sense in the context of the game.
+Already you can see what I mean when I frame this as a young human achieving his dreams. It all starts with the dream, *Sogno di Volare*, which is apparently also the theme song of *Civilization VI*, a rather famous strategy video game. I...don't know *why* it's the theme song for *Civilization VI*, but maybe it makes sense in the context of the game.
 
-Then, after the dream, comes the speculation. <em>The Heavenly Kingdom</em>, the mysterious, aetherial realm overhead. The lyrics were taken from <em>Scivias</em>, the prophetic writings of Hildegard von Bingen, who had visions of heaven and the soul leaving the body. Though Hildegard was German, the lyrics are in latin, and the translation to English communicates the desire to depart from Earth and seek the heavens.
+Then, after the dream, comes the speculation. *The Heavenly Kingdom*, the mysterious, aetherial realm overhead. The lyrics were taken from *Scivias*, the prophetic writings of Hildegard von Bingen, who had visions of heaven and the soul leaving the body. Though Hildegard was German, the lyrics are in latin, and the translation to English communicates the desire to depart from Earth and seek the heavens.
 
 "Who are they that fly in the clouds? And like doves to their windows? 
 
 It is said that they are those who, with full desire and full devotion, fly to heaven."
 
-And then we get to <em>Daedalus and Icarus</em>, one of the most powerful pieces of the album, depicting the classic myth of Icarus's flight toward the sun, simultaneously painting a story of determination, strength, and fear as the threats of such endeavors come to light. 
+And then we get to *Daedalus and Icarus*, one of the most powerful pieces of the album, depicting the classic myth of Icarus's flight toward the sun, simultaneously painting a story of determination, strength, and fear as the threats of such endeavors come to light. 
 
-After Icarus's failure, we're led into <em>The Fall</em>, with lyrics taken from the Divine Comedy. The song is a somber, wailing affair that starts with the (roughly) translated:
+After Icarus's failure, we're led into *The Fall*, with lyrics taken from the Divine Comedy. The song is a somber, wailing affair that starts with the (roughly) translated:
 
 "People, human, to fly up, born, why, to a little wind, so fall?"
 
@@ -54,11 +54,11 @@ and thence we came forth to see again the stars."
 
 No points go to whomever can tell me why the last verse was included. 
 
-With the stars now in sight, we reach <em>Astronomy</em>, where the understanding of our world and the universe becomes stronger. The words are poeticized in Polish from the writings of Copernicus, who theorized that the Earth and the heavens were spheres.
+With the stars now in sight, we reach *Astronomy*, where the understanding of our world and the universe becomes stronger. The words are poeticized in Polish from the writings of Copernicus, who theorized that the Earth and the heavens were spheres.
 
-And then we get to my second favorite piece of the entire album: <em>To the Stars</em>. 
+And then we get to my second favorite piece of the entire album: *To the Stars*. 
 
-Here, the story changes. With our newfound knowledge, we also have a newfound goal, one that, through advancements in science, math, and technology, <em>can</em> be reached. 
+Here, the story changes. With our newfound knowledge, we also have a newfound goal, one that, through advancements in science, math, and technology, *can* be reached. 
 
 It starts with an uplifting, almost childish imaginative tone, sung by an all-women's choir in French:
 
@@ -126,9 +126,9 @@ Ending with a gentle, but determined declaration:
 
 "To the stars!"
 
-Lyrically, this is my absolute favorite of the whole album. The sheer joyfulness, certainty, and power with which these hopeful words are sung legitimately chokes me up. I heard this several times without knowing what the words meant, but when I translated them out of sheer curiosity, that's when the entirety of this album clicked, the whole meaning behind it, its retelling of humanity's journey as a stumbling, ever-present desire to shiver the skies. That's when I knew I had to write this article, I had to gush about it to <em>somebody</em>.
+Lyrically, this is my absolute favorite of the whole album. The sheer joyfulness, certainty, and power with which these hopeful words are sung legitimately chokes me up. I heard this several times without knowing what the words meant, but when I translated them out of sheer curiosity, that's when the entirety of this album clicked, the whole meaning behind it, its retelling of humanity's journey as a stumbling, ever-present desire to shiver the skies. That's when I knew I had to write this article, I had to gush about it to *somebody*.
 
-But we're not done yet. The next song is entitled, "Oh the Humanity," referencing the tragedy of the Hindenburg disaster, a dirigible that catastrophically erupted in flight. A challenge to the hopefulness and certainty that <em>To the Stars</em> established.
+But we're not done yet. The next song is entitled, "Oh the Humanity," referencing the tragedy of the Hindenburg disaster, a dirigible that catastrophically erupted in flight. A challenge to the hopefulness and certainty that *To the Stars* established.
 
 Immediately following, though, come the famous (and here, paraphrased) words of Amelia Earhart, in the song titled simply "Courage."
 
@@ -176,13 +176,13 @@ We come to "The Power of the Spirit," a short, two-minute piece meant to build u
 
 To the crowning achievement:
 
-<em>We Choose to Go to the Moon</em>.
+*We Choose to Go to the Moon*.
 
-Here, the narrative has changed. From the fantastical daydreams, to determined assertions, to the operative word of the title: We <em>Choose</em> to Go to the Moon.
+Here, the narrative has changed. From the fantastical daydreams, to determined assertions, to the operative word of the title: We *Choose* to Go to the Moon.
 
 It's no longer a matter of "if." We now have the means, we've done the math, and we're willing to risk it until we get there.
 
-The lyrics are taken (and edited, slightly) from JFK's "We Choose to Go to the Moon" speech, dramatized with operatic fervor and orchestral embellishments to deliver an absolutely jaw-droppingly powerful climax to the story this album has been telling. The seed of thousands of years of human achievement and effort is now coming to fruition, and the only question left to answer is "why," a question that is <em>immediately</em> answered and discarded.
+The lyrics are taken (and edited, slightly) from JFK's "We Choose to Go to the Moon" speech, dramatized with operatic fervor and orchestral embellishments to deliver an absolutely jaw-droppingly powerful climax to the story this album has been telling. The seed of thousands of years of human achievement and effort is now coming to fruition, and the only question left to answer is "why," a question that is *immediately* answered and discarded.
 
 "Many years ago the great British explorer George Mallory,
 
